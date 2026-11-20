@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7 Kebiasaan Anak Indonesia Hebat — Xaverian Cinematic Analytics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            xavGold: '#D4A017',
+            xavGoldBright: '#EAB308',
+            xavGoldDark: '#A16207',
+            xavPastel: '#FEF9C3',
+            xavPastelDeep: '#FDE047',
+            xavIvory: '#FAF9F5',
+            xavObsidian: '#0B0D11',
+            xavCharcoal: '#1E293B',
+            xavSlate: '#475569'
+          },
+          fontFamily: {
+            display: ['Anton', 'sans-serif'],
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      background-color: #FFFFFF;
+      color: #1E293B;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    .editorial-title {
+      font-family: 'Anton', sans-serif;
+      letter-spacing: 0.02em;
+      line-height: 0.95;
+      text-transform: uppercase;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FEF08A 0%, #EAB308 48%, #CA8A04 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .cinematic-hero {
+      background:
+        radial-gradient(circle at 84% 18%, rgba(234, 179, 8, 0.24) 0%, rgba(11, 13, 17, 0) 46%),
+        radial-gradient(circle at 12% 88%, rgba(212, 160, 23, 0.16) 0%, rgba(11, 13, 17, 0) 44%),
+        linear-gradient(155deg, #0B0D11 0%, #151922 52%, #0B0D11 100%);
+    }
+    .hero-grid-overlay {
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .card-editorial {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease;
+    }
+    .card-editorial:hover {
+      transform: translateY(-4px);
+      border-color: #D4A017;
+      box-shadow: 0 22px 44px -16px rgba(212, 160, 23, 0.18);
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    #preloader {
+      transition: opacity 0.55s ease, visibility 0.55s ease;
+    }
+    #preloader.loaded {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .pill-active {
+      background-color: #0B0D11 !important;
+      color: #FDE047 !important;
+      border-color: #0B0D11 !important;
+    }
+    .nav-link-active {
+      color: #D4A017 !important;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF9F5;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D4A017;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-xavPastel selection:text-xavObsidian">
+
+  <!-- Cinematic Loading Screen -->
+  <div id="preloader" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-xavObsidian text-white px-6 text-center">
+    <div class="relative w-14 h-14 mb-6">
+      <div class="absolute inset-0 rounded-full border-2 border-xavGold/25"></div>
+      <div class="absolute inset-0 rounded-full border-2 border-xavGoldBright border-t-transparent animate-spin"></div>
+      <div class="absolute inset-0 flex items-center justify-center font-display text-xavPastelDeep text-lg tracking-wider">7K</div>
+    </div>
+    <p class="font-mono text-[11px] tracking-[0.38em] text-xavPastelDeep uppercase">Xaverian Editorial Intelligence</p>
+    <p class="font-display text-2xl sm:text-3xl tracking-wider mt-1.5">MEMVERIFIKASI 2.510 ENTRI DATA...</p>
+  </div>
+
+  <!-- Sticky Navigation Bar -->
+  <header class="sticky top-0 z-40 glass-nav border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-lg bg-xavObsidian flex items-center justify-center border border-xavGold transition-transform duration-300 group-hover:scale-105">
+          <span class="font-display text-xavGoldBright text-lg tracking-wider">7K</span>
+        </div>
+        <div>
+          <span class="font-heading font-extrabold text-sm tracking-tight text-xavObsidian block leading-none">7 KAIH XAVERIAN</span>
+          <span class="font-mono text-[10px] tracking-[0.2em] text-xavGold uppercase">Editorial Data Edition</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-7 text-xs font-semibold tracking-wider uppercase text-slate-600" id="desktopNav">
+        <a href="#overview" class="nav-item hover:text-xavGold transition-colors">Overview</a>
+        <a href="#habits" class="nav-item hover:text-xavGold transition-colors">7 Kebiasaan</a>
+        <a href="#visualizations" class="nav-item hover:text-xavGold transition-colors">Visualisasi</a>
+        <a href="#insights" class="nav-item hover:text-xavGold transition-colors">Insight & Analisis</a>
+        <a href="#datatable" class="nav-item hover:text-xavGold transition-colors">Tabel Data</a>
+        <a href="#conclusion" class="nav-item hover:text-xavGold transition-colors">Kesimpulan</a>
+      </nav>
+
+      <div class="flex items-center gap-2.5">
+        <label for="xlsxUpload" class="cursor-pointer inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-xavPastel text-xavObsidian border border-xavGold/50 hover:bg-xavGoldBright transition-colors" title="Opsional: Muat ulang file .xlsx mentah secara langsung di browser">
+          <span>Muat .XLSX</span>
+        </label>
+        <input id="xlsxUpload" type="file" accept=".xlsx,.xls" multiple class="hidden" />
+
+        <button id="mobileMenuBtn" class="lg:hidden w-9 h-9 rounded-lg border border-slate-300 flex items-center justify-center text-xavObsidian hover:border-xavGold" aria-label="Buka menu navigasi">
+          ☰
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 py-4 space-y-2 text-xs font-semibold uppercase tracking-wider text-slate-700">
+      <a href="#overview" class="block py-2 hover:text-xavGold">01. Overview Statistik</a>
+      <a href="#habits" class="block py-2 hover:text-xavGold">02. Analisis 7 Kebiasaan</a>
+      <a href="#visualizations" class="block py-2 hover:text-xavGold">03. Visualisasi Interaktif</a>
+      <a href="#insights" class="block py-2 hover:text-xavGold">04. Insight & Analisis</a>
+      <a href="#datatable" class="block py-2 hover:text-xavGold">05. Tabel Data Responden</a>
+      <a href="#conclusion" class="block py-2 hover:text-xavGold">06. Kesimpulan Editorial</a>
+    </div>
+  </header>
+
+  <!-- A. HERO SECTION -->
+  <section id="hero" class="cinematic-hero text-white relative overflow-hidden">
+    <div class="hero-grid-overlay absolute inset-0 pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-end">
+        <div class="lg:col-span-8">
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/[0.08] border border-xavGold/45 mb-7">
+            <span class="w-2 h-2 rounded-full bg-xavGoldBright animate-pulse"></span>
+            <span class="font-mono text-xs tracking-[0.22em] uppercase text-xavPastelDeep">Identitas Xaverian • Laporan Empiris Terverifikasi</span>
+          </div>
+
+          <h1 class="editorial-title text-5xl sm:text-7xl lg:text-[86px] text-white mb-6">
+            7 Kebiasaan<br />
+            <span class="gold-gradient-text">Anak Indonesia Hebat</span>
+          </h1>
+
+          <p class="font-heading text-lg sm:text-2xl font-medium text-slate-200 max-w-2xl leading-relaxed mb-9">
+            Membangun Generasi Unggul Melalui Kebiasaan Positif — Analisis kuantitatif utuh terhadap <span class="text-xavPastelDeep font-semibold">2.510 entri unik terdeduplikasi</span> dari empat gelombang pengisian data.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="#overview" class="px-6 py-3.5 rounded-xl bg-xavGoldBright text-xavObsidian font-heading font-bold text-xs sm:text-sm uppercase tracking-wider hover:bg-xavPastelDeep transition-colors shadow-lg shadow-xavGold/20">
+              Eksplorasi Statistik
+            </a>
+            <a href="#habits" class="px-6 py-3.5 rounded-xl bg-white/[0.06] border border-white/20 text-white font-heading font-semibold text-xs sm:text-sm uppercase tracking-wider hover:border-xavGoldBright hover:text-xavPastelDeep transition-colors">
+              Bedah 7 Kebiasaan
+            </a>
+            <a href="#datatable" class="px-5 py-3.5 rounded-xl text-xs sm:text-sm font-mono uppercase tracking-wider text-slate-300 hover:text-xavPastelDeep transition-colors">
+              Lihat 2.510 Catatan →
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Cinematic Executive Summary Card -->
+        <div class="lg:col-span-4">
+          <div class="rounded-2xl bg-white/[0.06] border border-xavGold/40 p-6 sm:p-8 backdrop-blur-md shadow-2xl">
+            <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
+              <span class="font-mono text-xs uppercase tracking-widest text-xavPastelDeep">Audit Data Utama</span>
+              <span class="font-mono text-[11px] text-slate-400">03 Okt – 12 Nov 2026</span>
+            </div>
+
+            <div class="space-y-6">
+              <div>
+                <p class="text-xs uppercase tracking-wider text-slate-400">Total Entri Unik Terverifikasi</p>
+                <p class="font-display text-5xl text-white tracking-wide mt-1" id="heroTotalResp">2.510</p>
+                <p class="text-xs text-slate-400 mt-1">Deduplikasi dari 4.290 baris mentah lintas 4 file</p>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                <div>
+                  <p class="text-xs uppercase tracking-wider text-slate-400">Penerapan Aktif</p>
+                  <p class="font-display text-3xl text-xavGoldBright mt-1" id="heroActivePct">70,08%</p>
+                  <p class="text-[11px] text-slate-400">Selalu + Sering</p>
+                </div>
+                <div>
+                  <p class="text-xs uppercase tracking-wider text-slate-400">Skor Indeks</p>
+                  <p class="font-display text-3xl text-white mt-1" id="heroMeanScore">3,997</p>
+                  <p class="text-[11px] text-slate-400">Skala maks. 5,00</p>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs">
+                <span class="text-slate-300">Perkembangan Pengisian 1 → 4</span>
+                <span class="font-mono font-semibold text-xavPastelDeep bg-xavGold/25 px-2.5 py-1 rounded">+4,86% Poin</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GLOBAL INTERACTIVE SCOPE & COHORT FILTER BAR -->
+  <section class="bg-xavIvory border-b border-slate-200 py-5 sticky top-16 z-30 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-4">
+      <div class="flex flex-wrap items-center gap-2" id="periodFilterGroup">
+        <span class="font-mono text-[11px] uppercase tracking-wider text-xavGoldDark font-bold mr-1">Gelombang:</span>
+        <button data-period="all" class="period-btn pill-active px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all">Semua Unik (2.510)</button>
+        <button data-period="p1" class="period-btn bg-white text-slate-700 border-slate-300 hover:border-xavGold px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all">Pengisian 1 (704)</button>
+        <button data-period="p2" class="period-btn bg-white text-slate-700 border-slate-300 hover:border-xavGold px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all">Pengisian 2 (943)</button>
+        <button data-period="p3" class="period-btn bg-white text-slate-700 border-slate-300 hover:border-xavGold px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all">Pengisian 3 (858)</button>
+        <button data-period="p4" class="period-btn bg-white text-slate-700 border-slate-300 hover:border-xavGold px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all">Pengisian 4 (724)</button>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-2.5">
+        <span class="font-mono text-[11px] uppercase tracking-wider text-xavGoldDark font-bold">Filter Cakupan:</span>
+        <select id="globalKelasFilter" class="px-3 py-1.5 rounded-lg border border-slate-300 bg-white text-xs font-semibold text-slate-700 focus:outline-none focus:border-xavGold">
+          <option value="ALL">Semua Kelas</option>
+          <option value="Kelas X">Kelas X</option>
+          <option value="Kelas XI">Kelas XI</option>
+          <option value="Kelas XII">Kelas XII</option>
+          <option value="Data tidak tersedia">Kelas: Data tidak tersedia</option>
+        </select>
+
+        <select id="globalGenderFilter" class="px-3 py-1.5 rounded-lg border border-slate-300 bg-white text-xs font-semibold text-slate-700 focus:outline-none focus:border-xavGold">
+          <option value="ALL">Semua Gender</option>
+          <option value="Perempuan">Perempuan</option>
+          <option value="Laki-Laki">Laki-Laki</option>
+          <option value="Data tidak tersedia">Gender: Data tidak tersedia</option>
+        </select>
+
+        <button id="resetGlobalFilters" class="px-3 py-1.5 rounded-lg text-xs font-mono uppercase tracking-wider text-slate-600 hover:text-xavObsidian hover:bg-xavPastel transition-colors">
+          Reset
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- B. OVERVIEW STATISTIK -->
+  <section id="overview" class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 reveal">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-[0.25em] text-xavGold font-semibold">01 • Ikhtisar Kuantitatif</span>
+          <h2 class="editorial-title text-4xl sm:text-5xl text-xavObsidian mt-2">Overview Statistik Penerapan</h2>
+        </div>
+        <div class="mt-3 md:mt-0 text-right">
+          <span id="activeScopeBadge" class="inline-block font-mono text-xs px-3 py-1 rounded-full bg-xavPastel text-xavObsidian font-semibold border border-xavGold/40">
+            Cakupan: Semua Data Unik • Semua Kelas • Semua Gender
+          </span>
+        </div>
+      </div>
+
+      <!-- 5 KPI Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 reveal">
+        <div class="card-editorial rounded-2xl p-6">
+          <span class="font-mono text-[11px] uppercase tracking-wider text-slate-400">Total Responden</span>
+          <p class="font-display text-4xl text-xavObsidian mt-2" id="kpiRespondents">2.510</p>
+          <p class="text-xs text-slate-500 mt-2" id="kpiItemsCount">52.696 sel jawaban valid</p>
+        </div>
+
+        <div class="card-editorial rounded-2xl p-6 bg-xavPastel/40 border-xavGold/50">
+          <span class="font-mono text-[11px] uppercase tracking-wider text-xavGoldDark font-bold">Persentase Penerapan</span>
+          <p class="font-display text-4xl text-xavObsidian mt-2" id="kpiOverallPct">70,08%</p>
+          <p class="text-xs text-slate-600 mt-2" id="kpiMeanText">Skor 3,997 / 5,00 (Selalu: 36,13%)</p>
+        </div>
+
+        <div class="card-editorial rounded-2xl p-6">
+          <span class="font-mono text-[11px] uppercase tracking-wider text-emerald-700 font-semibold">Penerapan Tertinggi</span>
+          <p class="font-heading font-extrabold text-xl text-xavObsidian mt-2" id="kpiHighestName">6. Bermasyarakat</p>
+          <p class="font-mono text-sm font-bold text-xavGold mt-1" id="kpiHighestPct">91,14% (Skor 4,453)</p>
+        </div>
+
+        <div class="card-editorial rounded-2xl p-6">
+          <span class="font-mono text-[11px] uppercase tracking-wider text-amber-700 font-semibold">Penerapan Terendah</span>
+          <p class="font-heading font-extrabold text-xl text-xavObsidian mt-2" id="kpiLowestName">5. Gemar Belajar</p>
+          <p class="font-mono text-sm font-bold text-slate-600 mt-1" id="kpiLowestPct">50,45% (Skor 3,564)</p>
+        </div>
+
+        <div class="card-editorial rounded-2xl p-6 bg-xavObsidian text-white">
+          <span class="font-mono text-[11px] uppercase tracking-wider text-xavPastelDeep">Indikator Perkembangan</span>
+          <p class="font-display text-4xl text-xavGoldBright mt-2" id="kpiTrendDelta">+4,86%</p>
+          <p class="text-xs text-slate-300 mt-2" id="kpiTrendSub">Pengisian 1 (66,61%) → 4 (71,47%)</p>
+        </div>
+      </div>
+
+      <!-- Audit & Demographic Strip -->
+      <div class="mt-8 rounded-2xl bg-xavIvory border border-slate-200/90 p-6 grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
+        <div>
+          <h3 class="font-mono text-xs uppercase tracking-wider text-slate-500 mb-2.5">Distribusi Jenjang Kelas (Cakupan Aktif)</h3>
+          <div id="demoKelasStrip" class="flex flex-wrap gap-2 text-xs font-medium"></div>
+        </div>
+        <div>
+          <h3 class="font-mono text-xs uppercase tracking-wider text-slate-500 mb-2.5">Distribusi Gender (Cakupan Aktif)</h3>
+          <div id="demoGenderStrip" class="flex flex-wrap gap-2 text-xs font-medium"></div>
+        </div>
+        <div>
+          <h3 class="font-mono text-xs uppercase tracking-wider text-slate-500 mb-2.5">Integritas & Kelengkapan Data</h3>
+          <p id="auditIntegrityText" class="text-xs text-slate-600 leading-relaxed"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- C. ANALISIS 7 KEBIASAAN ANAK INDONESIA HEBAT -->
+  <section id="habits" class="py-16 lg:py-24 bg-xavIvory border-y border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 reveal">
+        <span class="font-mono text-xs uppercase tracking-[0.25em] text-xavGold font-semibold">02 • Bedah Indikator Per Pilar</span>
+        <h2 class="editorial-title text-4xl sm:text-5xl text-xavObsidian mt-2">Analisis 7 Kebiasaan Utama</h2>
+        <p class="text-sm text-slate-600 max-w-3xl mt-3">
+          Setiap kebiasaan dievaluasi melalui tiga indikator perilaku spesifik. Persentase utama menunjukkan proporsi penerapan aktif (<span class="font-semibold text-xavObsidian">Selalu + Sering</span>), dilengkapi rincian sub-indikator, jumlah responden valid, serta interpretasi empiris berbasis data.
+        </p>
+      </div>
+
+      <div id="habitsGrid" class="grid grid-cols-1 lg:grid-cols-2 gap-7"></div>
+    </div>
+  </section>
+
+  <!-- D. DATA VISUALIZATION -->
+  <section id="visualizations" class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 reveal">
+        <span class="font-mono text-xs uppercase tracking-[0.25em] text-xavGold font-semibold">03 • Visualisasi Interaktif</span>
+        <h2 class="editorial-title text-4xl sm:text-5xl text-xavObsidian mt-2">Grafik Analitik & Perbandingan</h2>
+        <p class="text-sm text-slate-600 max-w-2xl mt-3">
+          Seluruh grafik terhubung secara langsung ke filter cakupan data di atas dan menampilkan tooltip angka terperinci saat disentuh kursor.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- 1. Interactive Bar Chart -->
+        <div class="lg:col-span-7 card-editorial rounded-2xl p-6 sm:p-8 reveal">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h3 class="font-heading font-bold text-lg text-xavObsidian">Peringkat Penerapan Aktif per Kebiasaan (%)</h3>
+              <p class="text-xs text-slate-500">Proporsi jawaban "Selalu" + "Sering" pada cakupan aktif</p>
+            </div>
+            <span class="font-mono text-xs px-2.5 py-1 rounded bg-xavPastel text-xavObsidian font-semibold">Bar Chart</span>
+          </div>
+          <div class="h-80">
+            <canvas id="habitBarChart"></canvas>
+          </div>
+        </div>
+
+        <!-- 2. Interactive Donut Chart -->
+        <div class="lg:col-span-5 card-editorial rounded-2xl p-6 sm:p-8 reveal">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h3 class="font-heading font-bold text-lg text-xavObsidian">Komposisi Skala Likert Keseluruhan</h3>
+              <p class="text-xs text-slate-500">Distribusi 5 kategori frekuensi jawaban pada cakupan aktif</p>
+            </div>
+            <span class="font-mono text-xs px-2.5 py-1 rounded bg-xavPastel text-xavObsidian font-semibold">Donut Chart</span>
+          </div>
+          <div class="h-80 flex items-center justify-center">
+            <canvas id="likertDonutChart"></canvas>
+          </div>
+        </div>
+
+        <!-- 3. Stacked Comparison Chart (Selalu vs Sering vs Kadang vs Jarang/TP) -->
+        <div class="lg:col-span-12 card-editorial rounded-2xl p-6 sm:p-8 reveal">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+            <div>
+              <h3 class="font-heading font-bold text-lg text-xavObsidian">Perbandingan Struktur Intensitas Antar-Kebiasaan (100% Stacked)</h3>
+              <p class="text-xs text-slate-500">Membedakan kebiasaan yang berakar pada konsistensi penuh ("Selalu") dibandingkan frekuensi moderat ("Sering" & "Kadang-kadang")</p>
+            </div>
+            <span class="font-mono text-xs px-2.5 py-1 rounded bg-xavPastel text-xavObsidian font-semibold self-start">Comparison Chart</span>
+          </div>
+          <div class="h-80">
+            <canvas id="stackedCompareChart"></canvas>
+          </div>
+        </div>
+
+        <!-- 4. Trend Line Chart -->
+        <div class="lg:col-span-6 card-editorial rounded-2xl p-6 sm:p-8 reveal">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h3 class="font-heading font-bold text-lg text-xavObsidian">Tren Perkembangan Pengisian 1 – 4</h3>
+              <p class="text-xs text-slate-500">Dinamika penerapan keseluruhan, tertinggi, dan terendah antargelombang</p>
+            </div>
+            <span class="font-mono text-xs px-2.5 py-1 rounded bg-xavPastel text-xavObsidian font-semibold">Trend Chart</span>
+          </div>
+          <div class="h-72">
+            <canvas id="trendLineChart"></canvas>
+          </div>
+        </div>
+
+        <!-- 5. Cohort Comparison Chart -->
+        <div class="lg:col-span-6 card-editorial rounded-2xl p-6 sm:p-8 reveal">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h3 class="font-heading font-bold text-lg text-xavObsidian">Perbandingan Jenjang Kelas & Gender</h3>
+              <p class="text-xs text-slate-500">Persentase penerapan aktif (Selalu + Sering) pada 2.510 entri unik</p>
+            </div>
+            <span class="font-mono text-xs px-2.5 py-1 rounded bg-xavPastel text-xavObsidian font-semibold">Cohort Chart</span>
+          </div>
+          <div class="h-72">
+            <canvas id="cohortCompareChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- E. INSIGHT & ANALYSIS -->
+  <section id="insights" class="py-16 lg:py-24 bg-xavIvory border-y border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 reveal">
+        <span class="font-mono text-xs uppercase tracking-[0.25em] text-xavGold font-semibold">04 • Sintesis Empiris</span>
+        <h2 class="editorial-title text-4xl sm:text-5xl text-xavObsidian mt-2">Insight & Analisis Otomatis</h2>
+        <p class="text-sm text-slate-600 max-w-3xl mt-3">
+          Setiap kesimpulan memisahkan secara tegas antara <strong>Fakta Data</strong>, <strong>Hasil Perhitungan</strong>, dan <strong>Interpretasi / Rekomendasi</strong> tanpa asumsi di luar berkas sumber.
+        </p>
+      </div>
+
+      <div id="dynamicInsightBanner" class="mb-8 rounded-2xl bg-xavObsidian text-white p-6 sm:p-8 border border-xavGold/40 reveal"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 reveal">
+        <div class="card-editorial rounded-2xl p-6 sm:p-7">
+          <span class="font-mono text-xs text-xavGold font-semibold uppercase">01 • Kebiasaan Paling Dominan</span>
+          <h3 class="font-heading font-bold text-xl text-xavObsidian mt-2">Bermasyarakat (91,14%) & Beribadah (80,36%)</h3>
+          <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+            <strong>Fakta & Perhitungan:</strong> Pada 2.510 entri unik, pilar <em>Bermasyarakat</em> memperoleh 6.863 jawaban aktif (4.130 <em>Selalu</em> + 2.733 <em>Sering</em>) dari 7.530 item (<strong>91,14%</strong>, skor <strong>4,453</strong>), dengan indikator tertinggi pada penerapan 5S (Q18: <strong>92,99%</strong>). Pilar <em>Beribadah</em> berada di peringkat kedua dengan <strong>80,36%</strong> (skor <strong>4,228</strong>).
+          </p>
+          <p class="text-xs text-slate-500 mt-4 pt-3 border-t border-slate-100">
+            <strong>Interpretasi:</strong> Etika interaksi sosial (senyum, sapa, salam, sopan, santun), kepedulian kebersihan, dan ketaatan beribadah telah terinternalisasi kuat sebagai norma keseharian peserta didik.
+          </p>
+        </div>
+
+        <div class="card-editorial rounded-2xl p-6 sm:p-7">
+          <span class="font-mono text-xs text-amber-700 font-semibold uppercase">02 • Kebiasaan yang Perlu Ditingkatkan</span>
+          <h3 class="font-heading font-bold text-xl text-xavObsidian mt-2">Gemar Belajar (50,45%) & Tidur Cepat (62,22%)</h3>
+          <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+            <strong>Fakta & Perhitungan:</strong> Pilar <em>Gemar Belajar</em> hanya mencatat <strong>50,45%</strong> penerapan aktif (skor <strong>3,564</strong>), ditarik turun oleh indikator membaca bacaan di luar buku pelajaran minimal 15 menit/hari (Q13: <strong>37,41%</strong>) dan pemanfaatan perpustakaan/platform digital (Q15: <strong>46,97%</strong>). Pilar <em>Tidur Cepat</em> berada di posisi kedua terendah (<strong>62,22%</strong>) karena rendahnya disiplin menjauhkan gadget 30 menit sebelum tidur (Q20: <strong>49,88%</strong>) dan tidur maksimal pukul 21.30 WITA (Q19: <strong>53,55%</strong>).
+          </p>
+          <p class="text-xs text-slate-500 mt-4 pt-3 border-t border-slate-100">
+            <strong>Interpretasi:</strong> Hambatan utama terletak pada kebiasaan mikro malam hari (paparan gawai) dan rutinitas literasi mandiri harian, bukan pada kemampuan memahami bacaan (Q14 mencapai <strong>66,93%</strong>).
+          </p>
+        </div>
+
+        <div class="card-editorial rounded-2xl p-6 sm:p-7">
+          <span class="font-mono text-xs text-xavGold font-semibold uppercase">03 • Pola & Kesenjangan Antar-Indikator</span>
+          <h3 class="font-heading font-bold text-xl text-xavObsidian mt-2">Asimetri Antara Persepsi Kebugaran & Praktik Terukur</h3>
+          <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+            <strong>Fakta & Perhitungan:</strong> Dalam pilar <em>Berolahraga</em> (<strong>63,86%</strong>), sebanyak <strong>80,60%</strong> responden menyatakan menjaga tubuh tetap bugar (Q09), namun hanya <strong>50,00%</strong> yang rutin berolahraga 15–30 menit setiap hari (Q07). Pola serupa muncul pada <em>Makan Sehat</em> (<strong>64,92%</strong>): minum air cukup 1,5–2 liter mencapai <strong>76,18%</strong> (Q12), sedangkan membatasi makanan cepat saji dan minuman manis hanya <strong>47,97%</strong> (Q11).
+          </p>
+          <p class="text-xs text-slate-500 mt-4 pt-3 border-t border-slate-100">
+            <strong>Interpretasi:</strong> Peserta didik cenderung menilai kebugaran dan hidrasi secara umum dengan baik, tetapi masih menghadapi tantangan dalam pembatasan konsumsi jajanan kurang sehat dan olahraga terjadwal.
+          </p>
+        </div>
+
+        <div class="card-editorial rounded-2xl p-6 sm:p-7">
+          <span class="font-mono text-xs text-xavGold font-semibold uppercase">04 • Tren Longitudinal & Rekomendasi Data</span>
+          <h3 class="font-heading font-bold text-xl text-xavObsidian mt-2">Pertumbuhan +4,86% & Variasi Antar-Jenjang Kelas</h3>
+          <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+            <strong>Fakta & Perhitungan:</strong> Penerapan aktif meningkat dari <strong>66,61%</strong> pada Pengisian 1 menjadi <strong>70,41%</strong> (Pengisian 2), <strong>71,75%</strong> (Pengisian 3), dan <strong>71,47%</strong> (Pengisian 4). Berdasarkan jenjang kelas unik, <strong>Kelas XII</strong> mencatat capaian tertinggi (<strong>74,15%</strong>, N=735), diikuti <strong>Kelas X</strong> (<strong>69,90%</strong>, N=818), dan <strong>Kelas XI</strong> (<strong>67,15%</strong>, N=951).
+          </p>
+          <p class="text-xs text-slate-500 mt-4 pt-3 border-t border-slate-100">
+            <strong>Rekomendasi Berbasis Data:</strong> (1) Program literasi non-pelajaran 15 menit terjadwal untuk mengangkat Q13 (37,41%); (2) Kampanye jeda gawai 30 menit sebelum pukul 21.30 WITA untuk Q19–Q20; (3) Intervensi pendampingan khusus pada jenjang Kelas XI.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- F. INTERACTIVE DATA TABLE (ALL 2.510 RECORDS) -->
+  <section id="datatable" class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 reveal">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-[0.25em] text-xavGold font-semibold">05 • Eksplorasi Catatan Lengkap</span>
+          <h2 class="editorial-title text-4xl sm:text-5xl text-xavObsidian mt-2">Tabel Data Responden</h2>
+          <p class="text-xs text-slate-500 mt-2">
+            Memuat seluruh <strong class="text-xavObsidian" id="tableTotalBadge">2.510</strong> entri unik terverifikasi dari empat berkas Excel Anda. Klik <strong>Rincian</strong> pada setiap baris untuk memeriksa jawaban lengkap 21 indikator.
+          </p>
+        </div>
+      </div>
+
+      <!-- Table Search, Filter & Sort Controls -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 mb-6 reveal">
+        <input id="tableSearch" type="text" placeholder="Cari timestamp, sumber, kelas, gender..." class="lg:col-span-2 px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:outline-none focus:border-xavGold" />
+
+        <select id="tableTierFilter" class="px-4 py-2.5 rounded-xl border border-slate-300 text-xs bg-white focus:outline-none focus:border-xavGold">
+          <option value="ALL">Semua Tingkat Capaian</option>
+          <option value="HIGH">Tinggi (≥ 80% Aktif)</option>
+          <option value="MID">Menengah (60% – 79,9%)</option>
+          <option value="LOW">Perlu Penguatan (&lt; 60%)</option>
+        </select>
+
+        <select id="sortTable" class="px-4 py-2.5 rounded-xl border border-slate-300 text-xs bg-white focus:outline-none focus:border-xavGold">
+          <option value="ts_desc">Urutkan: Terbaru → Terlama</option>
+          <option value="ts_asc">Urutkan: Terlama → Terbaru</option>
+          <option value="score_desc">Urutkan: Skor Tertinggi</option>
+          <option value="score_asc">Urutkan: Skor Terendah</option>
+        </select>
+
+        <select id="pageSizeSelect" class="px-4 py-2.5 rounded-xl border border-slate-300 text-xs bg-white focus:outline-none focus:border-xavGold">
+          <option value="10">10 baris / halaman</option>
+          <option value="25">25 baris / halaman</option>
+          <option value="50">50 baris / halaman</option>
+        </select>
+      </div>
+
+      <!-- Table Wrapper -->
+      <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm reveal">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-xavObsidian text-white font-mono text-[11px] uppercase tracking-wider">
+              <th class="py-3.5 px-4">No</th>
+              <th class="py-3.5 px-4">Timestamp</th>
+              <th class="py-3.5 px-4">Sumber Berkas</th>
+              <th class="py-3.5 px-4">Kelas</th>
+              <th class="py-3.5 px-4">Gender</th>
+              <th class="py-3.5 px-4">Penerapan Aktif</th>
+              <th class="py-3.5 px-4">Skor Rata-Rata</th>
+              <th class="py-3.5 px-4 text-right">Detail</th>
+            </tr>
+          </thead>
+          <tbody id="dataTableBody" class="divide-y divide-slate-200 text-xs"></tbody>
+        </table>
+      </div>
+
+      <!-- Pagination Controls -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mt-5 text-xs text-slate-600">
+        <p id="paginationInfo">Menampilkan 0–0 dari 0 entri</p>
+        <div class="flex items-center gap-1.5">
+          <button id="firstPage" class="px-3 py-1.5 rounded-lg border border-slate-300 hover:border-xavGold disabled:opacity-40">« Awal</button>
+          <button id="prevPage" class="px-3 py-1.5 rounded-lg border border-slate-300 hover:border-xavGold disabled:opacity-40">‹ Sebelumnya</button>
+          <span id="pageIndicator" class="font-mono font-semibold px-3 py-1.5 rounded-lg bg-xavIvory border border-slate-200">1 / 1</span>
+          <button id="nextPage" class="px-3 py-1.5 rounded-lg border border-slate-300 hover:border-xavGold disabled:opacity-40">Berikutnya ›</button>
+          <button id="lastPage" class="px-3 py-1.5 rounded-lg border border-slate-300 hover:border-xavGold disabled:opacity-40">Akhir »</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- G. CONCLUSION EDITORIAL SECTION -->
+  <section id="conclusion" class="cinematic-hero text-white py-20 lg:py-28 relative overflow-hidden">
+    <div class="hero-grid-overlay absolute inset-0 pointer-events-none"></div>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 reveal">
+      <span class="font-mono text-xs uppercase tracking-[0.3em] text-xavPastelDeep">06 • Penutup & Sintesis Akhir</span>
+      <h2 class="editorial-title text-4xl sm:text-6xl text-white mt-3 mb-6">
+        Fondasi Karakter Solid,<br /><span class="gold-gradient-text">Arah Penguatan Terukur</span>
+      </h2>
+      <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl mx-auto mb-10">
+        Dari total <strong class="text-white">2.510 entri unik terverifikasi</strong> lintas empat gelombang pengisian, tingkat penerapan aktif <em>7 Kebiasaan Anak Indonesia Hebat</em> mencapai <strong class="text-xavGoldBright">70,08%</strong> dengan indeks rata-rata <strong class="text-white">3,997 / 5,00</strong> dan tren peningkatan bersih sebesar <strong class="text-xavPastelDeep">+4,86 poin persentase</strong> dari Pengisian 1 ke Pengisian 4. Karakter sosial <em>Bermasyarakat</em> (91,14%) dan spiritualitas <em>Beribadah</em> (80,36%) tampil sebagai pilar terkuat, sementara akselerasi pada <em>Gemar Belajar</em> (50,45%) dan <em>Tidur Cepat</em> (62,22%) menjadi fokus strategis utama untuk mewujudkan pembiasaan diri yang seimbang.
+      </p>
+      <div class="inline-flex flex-wrap justify-center gap-5 text-xs font-mono text-slate-400 border-t border-white/15 pt-6">
+        <span>SUMBER TUNGGAL: 4 BERKAS EXCEL PENGGUNA</span>
+        <span>•</span>
+        <span>2.510 ENTRI UNIK & 52.696 SEL VALID</span>
+        <span>•</span>
+        <span>IDENTITAS XAVERIAN</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Respondent Detail Modal -->
+  <div id="detailModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/75 backdrop-blur-sm p-4">
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[86vh] overflow-y-auto p-6 sm:p-8 shadow-2xl border border-xavGold/50">
+      <div class="flex items-start justify-between border-b border-slate-200 pb-4 mb-5">
+        <div>
+          <span class="font-mono text-[11px] uppercase tracking-widest text-xavGold font-semibold">Inspeksi Detail Responden</span>
+          <h3 id="modalTitle" class="font-heading font-bold text-lg text-xavObsidian mt-1">Timestamp</h3>
+          <p id="modalSub" class="text-xs text-slate-500 mt-0.5"></p>
+        </div>
+        <button id="closeModal" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-xavObsidian hover:text-white flex items-center justify-center font-bold transition-colors">✕</button>
+      </div>
+      <div id="modalContent" class="space-y-2.5 text-xs"></div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="fixed bottom-6 right-6 z-40 hidden w-11 h-11 rounded-full bg-xavObsidian text-xavGoldBright border border-xavGold shadow-xl items-center justify-center hover:scale-105 transition-transform font-bold" aria-label="Kembali ke bagian atas">
+    ↑
+  </button>
+
+  <script>
+    // =========================================================================
+    // 1. VERIFIED QUESTIONS & PACKED RAW DATASET (ALL 2.510 UNIQUE RECORDS)
+    // =========================================================================
+    const QUESTIONS = [
+      "Saya bangun pagi tepat waktu sesuai jadwal harian tanpa perlu dibangunkan berkali-kali",
+      "Saya memiliki cukup waktu di pagi hari untuk bersiap-siap tanpa terburu-buru sebelum berangkat sekolah",
+      "Saya tidur cukup (7-8 jam) malam sebelumnya sehingga merasa segar saat bangun pagi",
+      "Saya menjalankan ibadah tepat waktu sesuai ajaran agama yang saya anut",
+      "Saya meluangkan waktu khusus setiap hari untuk berdoa dan mengucap syukur",
+      "Saya mengamalkan nilai-nilai ajaran agama dalam berinteraksi dengan sesama di sekolah dan di rumah",
+      "Saya melakukan aktivitas fisik atau olahraga (seperti peregangan, jalan kaki) minimal 15-30 menit sehari",
+      "Saya aktif bergerak di sela-sela kegiatan belajar/duduk lama",
+      "Saya menjaga kondisi tubuh tetap bugar dan energik selama menjalani aktivitas sehari",
+      "Saya mengonsumsi makanan bergizi seimbang (mencakup sayur, buah, dan protein) setiap hari",
+      "Saya membatasi konsumsi makanan cepat saji, minuman manis berlebih, atau jajanan kurang sehat",
+      "Saya minum air dalam jumlah yang cukup (minimal 1,5 liter-2 liter) setiap hari",
+      "Saya meluangkan waktu membaca buku/artikel informatif di luar buku pelajaran minimal 15 menit sehari",
+      "Saya berusaha memahami isi bacaan dan mencari tahu lebih dalam tentang informasi baru yang saya temukan",
+      "Saya menggunakan platform digital atau perpustakaan untuk membaca materi bermanfaat",
+      "Saya peka dan bersedia membantu teman, keluarga, atau warga sekolah yang membutuhkan bantuan",
+      "Saya aktif menjaga kebersihan dan kerapian lingkungan sekolah maupun tempat tinggal",
+      "Saya menerapkan senyum, sapa, salam, sopan, santun dalam berinteraksi sehari-hari",
+      "Saya tidur malam tepat waktu (tidak bergadang tanpa alasan mendesak) Maksimal Pukul 21.30 WITA",
+      "Saya mematikan atau menjauhkan gadget minimal 30 menit sebelum tidur malam",
+      "Saya memanfaatkan waktu luang untuk beristirahat dengan cukup agar tidak kelelahan saat beraktivitas"
+    ];
+
+    const HABIT_DEFS = [
+      { id: 1, name: "Bangun Pagi", qIdx: [0, 1, 2] },
+      { id: 2, name: "Beribadah", qIdx: [3, 4, 5] },
+      { id: 3, name: "Berolahraga", qIdx: [6, 7, 8] },
+      { id: 4, name: "Makan Sehat dan Bergizi", qIdx: [9, 10, 11] },
+      { id: 5, name: "Gemar Belajar", qIdx: [12, 13, 14] },
+      { id: 6, name: "Bermasyarakat", qIdx: [15, 16, 17] },
+      { id: 7, name: "Tidur Cepat", qIdx: [18, 19, 20] }
+    ];
+
+    const PACKED_RECORDS = "10031052484435433333333334444440011100310534644344432334424344322400111003105430421555554332222554122001110031055033315334325452335451140011100310555755455555454545544545500111003095246443444323444243443324XL1110030952505545555555354554455551P111003095304443544554454334345233XP1110030953182245235355352414241221L1110030953483214544343432425451221L111003095505443444323444343343324XL1110030957024445443344343444444341P1110030958023555353355333335555550P111003095807444445544434344444335XP1110030958414524325423521522324251L1110030959314554545455445535454531P111003100546334334342453342555434XP1110031019405545555555555555554551L1110031022593534355554333325552451L1110031038353444344455442334453341L1110031042234333433434453334445341P1110031059435555553354543423454551P1110031059524555454545353435455241L1110031110194222344344233344553451L1110031113503333352333232334542341P1110031117212424233222532423334231L1110031206153552234244342323444341L1110031223452554443343432334444341P111103083707533555555555555555355XP1111030838003534432343323425445342P1111030838364544555555445534455541P1111030838445435352353343424554252P111103083855542555345423454455244XP111103083903534444554445355455335XP1111030839044545343553353345553351P111103083912443454245433343444534XP1111030839145554433455353435454441P111103083922443435544454344555445XP1111030839245545432454233424555551P1111030839264444555454453345554351L1111030839315545453255433355554451P111103083949442434233334333444334XP111103083950552555454355344445244XP111103084003343345342334233445323XP111103084006344445454454453445245XP111103084008555555555545555555555XP111103084014543554344445453343553XP111103084017555555555555355555555XP111103084034453444343352242354354XP111103084041554435455343244545324XP1111030841134435453455333345553352P111103084129544545444435443545455XP1111030841414355554344444443444442L111103084142555555555555454555555XP1111030841495444344333312333343242P1111030841523544442343354424433452P111103084155434444543444354353334XP1111030842014534453433443444443342P111103084217533545545534333554354XP1111030842194444351454531535444331P111103084227345555435443344445335XP111103084238454454424435243344533XP1111030843034555333545543434553351L111103084305554444444444444445554XP111103084308353533455435234554325XP111103084317555554545545453555445XL111103084339545555445545343454434XL111103084354443443355532233344322XP111103084400444554244422433434444XP1111030844135445445443333334553342P111103084513454554354535454545355XP111103084540454555355555344545345XP1111030845405534342445213325552251P111103084543554445555435343545333XP1111030845595445555554554445554352P1111030846045555532532554242225551P1111030846195544344433553315353132L1111030846345354543343454345555352P111103084636453423424535242545314XL1111030846375545544454453334453342P1111030846473443545534532435453451P111103084649344544344434343444555XP111103084653443333344435443445355XP1111030847023534333333222223353231P1111030847125523332343355335552352P1111030847134545545555544445554452L1111030847215554443555553555555552L111103084728342434243535342455434XP111103084729535554435533345555434XP1111030847294444443445333434543352P1111030847353445553355454545554452P111103084752353333353223151333212XL1111030848114555543455453545554452P1111030848285555453355353455554352P111103084856455443343424334435535XP111103084858545455332233444444323XP111103084907354545245244354444353XP1111030849134535352554453545553341P1111030850114545453445344445543352P111103085030553444434424344445234XL1111030850333433255444332435352341L111103085036554445545343331335545XP111103085043443444435535232454225XP1111030851224545543543343435534551L111103085138454554335535433555434XP1111030851464545552152333355442542P111103085159552345445445222545335XP1111030851594345343435453433453332P1111030852124234453443352335553541P111103085218443553543325233554224XP1111030852213524344454353524453551P111103085236354554555545343555345XP111103085236553555544533443555354XP111103085240354055235535545555445XP1111030852495555343433443334354341L1111030852573335433334453434442242L1111030853265555551433323332555551P111103085342354555345544534555545XP1111030853435553342433233333444352P1111030853565544443444343444443431P1111030854095535355354445535553351P1111030854114334443444332334433331P1111030854185545454455452345554151L111103085421553544545444434554454XL1111030854314535555555553445553352L1111030854375554434255553325554451L1111030854505543454343433434544452L111103085455454545555545455555445XL1111030855064543344442342434553432L111103085509554444444334333445445XP1111030855185534553433243324453552P111103085521554335243424235444425XP1111030855305445553454443435553351P111103085535445545345444253455425XP1111030855365555555555555533555551P111103085537344433534543334545345XP1111030855515545455453445544454441L111103085604353422335555242555555XP1111030856074445543454343234454342P1111030856455544543343433334443542P1111030857064535535553442525552231L1111030857254545344453342334454442L1111030857314455443445443445455441P1111030857345455442334223434345221P1111030857445534353455355555553551P1111030858024543341543343424454341P1111030858165535544344344545553551P1111030858175435453554553535553352P111103085820554545545555455555455XP1111030858255555555555555555555552L1111030858275534445433333434444541L1111030858374444443343433344453342P111103085838444434444343333444333XL1111030858513445443344244334533551P1111030858553434433443343334443341P1111030859003444523443442333444231L1111030859023455244432143414444232L1111030859345545343353444334453451P1111030859435545433255553325554551L1111030859465444342344333334454341P1111030859522544342242242423451242L111103085959555545445444454555445XL1111030900175543242335342325553231P111103090033555534223334333444555XP111103090058333544333322232243223XP1111030901185545544454354335553341P1111030901245444444343433433443441P1111030901304445544334443424454341P1111030901335535553455352425552352P111103090205355435444555433345555XP111103090216554555355544555555424XL111103090220453534234423332555234XP1111030902254534444333333334453331L1111030902254555453545353334453351P1111030902354423433445323334442221P1111030902384445453345532335554341P111103090243445544435434343545444XL1111030902565555443555444445555551P1111030903035545453355344455552351P1111030903564535554545455545553341P1111030904163445352344343445433231P1111030904195544443352342334443231P1111030904333424252442242445452231P1111030904463434342233251424443141P111103090523444455454454243445345XP1111030905244545554455554445555451P1111030905415544354555454445554351P1111030905544422432224233413542242P111103090614454545455555454555454XL111103090614444534555343234555324XL111103090617343343343322332433234XL111103090630343343343322332433234XL1111030906505435555553555555553552L1111030906523544425534235333553431L1111030907143333233434343343333431L1111030907314444543344343434445342P1111030908125344553445343535553341P1111030908233545434343444324454551P111103090859443445335434343345335XL111103090917343243343224333434434XL1111030909215445545545352334453342P1111030909424542233243323425432432L111103090943444434444233334544343XL111103090953443344444333344444444XP1111030910314445254444424444554442P1111030910325215454244252225555241L111103091035445445344445544455434XP1111030910554544445353453335555542L1111030911254543344344453435553451L1111030911295545343543354244455231P111103091159343333343334343434434XL111103091221555554435544553555555XP1111030912335545352454544535554451P111103091246555534344425454444525XL1111030913014443343334334434553432P1111030913185545532552554424555551P1111030914264555343435255434553341P1111030915244555252334331333453131P1111030915574515555554554555555552L1111030916124535452534354445552151P1111030916264453434543433344445232P1111030916315445453454353444554351P1111030917404444332334242233343432P1111030920534324432222253434453342P111103092247453333233344344444343XP111103092253545555435445445455554XP111103092255554453334333344434444XP1111030923124544553443453455555441L1111030923365555554455343435554552P111103092337543333334444333444444XL1111030923505455553555555555555551P1111030923505354543355344355555341P111103092427343435344454353555455XP1111030924435534343353332235455551P111103092448455555434435433555545XP1111030925325555225555554324555551L1111030926593435455333343434454441P1111030927153445342534343535443431L111103092825455443344445252454544XL1111030928275544443345554543554451P1111030928455555555555554435555442P111103092921443555445534333555235XP111103092936343334444444442445534XP111103092943354555444434343555455XP1111030930025545554354455445555541P111103093032555444344435443455535XP1111030930384433341334443434542441L111103093054523225353322333554315XP1111030932514532434423223115531141P1111030933595455543444453445554552P1111030934215555353454353434455552P1111030934555555554555555555554552P111103093458454555345545333555345XP1111030935164544443533453435453351L1111030936054434342443433435444352P1111030936184445443443333334444442P1111030936184345333444333325453451P111103093626443444323444243443324XL1111030936444435243443344435543351P1111030936504443344444323323344442P111103093707534423344334344334524XP1111030937173335535453333424542242P111103093723424325244444232435325XP1111030937343445434445353434553442L1111030938222344252253242423553342P1111030939534445344444333423244441P111103094009345553535525333544555XL1111030940365435553344553545353351P111103094136535555335333322543353XL111103094137443544333545435543432XP1111030941402334232343232344343331L1111030942115444352354352424454251P1111030943094545543444333444554442P1111030943105544254422442244444242P111103094415343334433434232434324XL1111030944393444352432242233353241P111103094503543434523334455555324XP1111030945174434344433343334333231P111103094528443335334234232444433XP111103094642443533534455241445335XL1111030947222433235325122223443231P111103094737454545344544334455344XP1111030948335334535125354434553321P111103094850452535244434345555434XP1111030950424433234343243323453351P111103095121224554125555334445545XP111103095217444555555445454555455XP1111030952455354153255353335543341L1111030952514334552453243535553451P1111030955104545455334343435454351P1111030956535544543444342434454341P1111030956565345343345343435552351P111103095715555555455555444555545XP1111030957354544443444354445454441P1111030957452343252433252324434351P111103095837555545345545343555455XP111103095856554424534422333444313XP1111030959185544345235354435555352P111103095936554434444434444454434XP1111031000415455553445454335553542P1111031001395555443353552354555352P111103100201334334435335232555135XL1111031002355555554455144444455451P111103100235433554223544443435333XP1111031003424443333353332222344341L1111031004004455552454353424553552P111103100403544454433444344444333XP111103100413443443544334333444444XP111103100734353554334343353554533XP1111031007474453243555453445554441L1111031009334435332323223334444331P111103101006443554333555232453222XL1111031010385534534543343535553352P1111031011032544443344334445554341P111103101136555555335535333555555XL1111031014125555543343243335555351P111103101423553545444444333455355XP1111031014334535352543252535552551P111103101459353533434333333434434XL1111031015004444443343333534443351P1111031015063325352453242323342241P111103101615453344345335544545335XL1111031017294535555345353424553351P111103101743455345534524344553345XP1111031018275434332334342324353351L1111031018424434345454333334453341L111103101844344435355433454545435XP1111031019094545555444343445554451P1111031019534335445544253445553222L1111031021222544535435554333534331P1111031022525555555555555555555552P1111031024225555542454225455555552P1111031026014534442445334544553441P111103102628544433445335355445334XL1111031026435445455345332535454341P111103102648444335525424344545113XL111103102657344434235334344345355XP111103102729545555344535344445554XP1111031027535555553455344445543351P1111031028473215233244333345552131P1111031029335535455455343445453352P111103103007554444333444444444434XP1111031031105355443434453334455341P111103103122255535334535355555535XP1111031031444334443254344444443431P1111031032543435435545352454435351P111103103307435544354535333445445XP1111031033194555345445554325454551L111103103338353554445423254454435XP111103103407533435233355245555253XP1111031035025555553335453434553231P111103103532554555344435334444445XL111103103545545444444424224445554XP1111031036135434442542342424542232P111103103614444544334433443434434XL111103103851545535244424433445334XP111103103907434443233332343545434XP111103103939222555353433353455234XP111103104305554434443435454544333XL1111031043415555332444353425555451P1111031044525545555455454455455552P1111031045394534245442224444453341P111103104644554545545445434555454XL111103104650545545344434355544535XL1111031047284433342332342534453351P111103104740542225255533343555133XP1111031048013355355355531525553351L1111031048035555453455332435554351P111103104832443555535554344455334XP1111031049125545444455334335555451P1111031049155445445344553445544341P1111031049544534443444445545555541L111103105026553435534335234555223XP1111031050513545435355453434454341P1111031050535535352343533335443252P1111031052225535333542242325555552P1111031052575445543343552334544542P111103105306545554435533453555345XP111103105408553443323244333233343XL1111031054114544343455353535554341L111103105418342442234324343434323XP1111031054304555553355234444553551P1111031055363433324322252313454231P111103105606224432335545343555444XL111103105620253342335234433434425XL1111031056455544432534233335444541P1111031056565455554554444545555442P1111031056595344452445354455555552L1111031057004444533353233534444551P1111031057055524442233254535443331L1111031058503424233443343424343341L1111031059034444443334343324444341L1111031100365415253453552415521151L1111031101313525433335332335555551P1111031101375533334444354434443342P1111031101494444345344444443434341P1111031101545433443343453434443332P1111031101564445554544444445454451P1111031102283425252542441443453341P1111031102375535352333343324453331P1111031102384445453443443445454441P1111031102394434333445533334554351P1111031102484424542235555553551531P111103110322454434545334344543434XL1111031104334345553355343444543342P1111031105175543334444353434453142L1111031105194554343554444435445441L111103110527555355334323345455435XP1111031107175555553445454535553351P1111031107185554453455354455555552P1111031108005545443444334424443341P1111031109205435432444342435443341L1111031110345544543453443435453451P1111031112404441122444353313444431L1111031113394443342334443444443342L1111031114235554553454443535453451P111103111527445044554434334555545XP1111031116285555555545545535555552P1111031118224544455453343425553451L111103111922254524434335222443343XL1111031122432344344443344334443242P111103112355334444544445233333322XP1111031124454545344445343435554452P1111031125365535452343243435553242P1111031127325325545455453425554451L1111031127594443332223343433444332L1111031131253545552343454535555552P111103113144344544334534333445334XL111103113343443213433345454443343XL111103113836553544555434334555325XP111103113852554554345233344443435XP1111031140494535455355243335543551L111103114135354544453445343454555XP1111031142034535354445443325552252P1111031147344545553344354445454551P1111031153395435353345333344542331P1111031155285435554345432434453541P111103115636542424145333255534432XP1111031156484435343354453434552241P111103115807432545334433443544335XP1111031201554443353343253334543231P1111031203313425554445212335552122P1111031203453445552334343444454442P1111031206235555252245555445445141P111103120758345425424424432455434XL1111031208493335434442433435453252L111103120948344544344444344544434XP1111031210463535553454353435553331P111103121304343535124333334444313XP1111031214562544552333243335552251P1111031215485535352435333424443351P1111031217315553541424333415554341P111103121749333444233544435444234XL1111031219234524252424242224542241P1111031220002325542332443435553331P1111031220233455554444343444554452P111103122642444545345545443455323XP1111031228215554433344433333335332P1111031229164434332343343424453341P1111031229354445355455354544555551P1111031230305534454454344445553552P1111031230515525455445445444555552L111103123156142221233425222143214XL111103123320353445355533255554424XL1111031234474545444445443444443452L1111031235215434355445334545454241L1111031236124554543343322215543331P111103123928555555444444433444545XP1111031240194524453544344555555552P1111031242335545433354253444443352P1111031244053433232333252323443342L111103124454454444554435544344344XL1111031254453433353212123235551252P1111031255003422443255442224452441L1111031255205354344333333344453232P1111031256445534254433442345452241L1111031258035535332242222325453352P1111031308134355543344443455554542P1111031309164434443433344424433351L111103131208232522335545354555425XP1111031316404555553445343434454441P1111031316514444443445353334443342L1111031318313543343333333333333331L1111031319145554353344454344455441P111103132156443544443343244334223XP111103132536555555135544454555525XP111103132633554245245425433455454XP1111031327285545554555345444555551P1111031333363543335445353535453451L111103134547442323333333333333344XP1111031351414335343345542324442141P1111031355063344251445342425553351P1111031358473445455454443545553342P111103140528544444344433343344434XP1111031415033555553445333545554551P1111031417503453443334333324555551P1111031419073545554455533435453352P111103141956455545335555354455525XP1111031426475455554445533325555551P1111031428304443344443343434443342L111103143434434544344434353555535XP1111031439285555554555354445553351P1111031441085434444344453434443432P1111031448015554433353453445555451P1111031459205445443443443434444442L1111031502304435553533443554553351L1111031503273324353353443425442251P1111031506185545452344343544454352P1111031507502235552222244324343231L111103151256334343253434343444323XP1111031536015554453454343525454241P1111031549244334443333353333353332L1111031556345545545555445445455452L111103160528545544445444343455545XL1111031606345525555353343535551321P1111031612155555555353533335355551P1111031618535543331242142444444442P1111031629385455454254554545554432P1111031633352424423333445544553411L1111031634551521135543332433341121L1111031700094434335533344535542351P1111031700495545454454353434543341P1111031703325444343344533433444342P111103170437443333234333333344323XP111103170709443332334333333344323XP1111031709432452333254333423343341P111103171042555545354535443445424XP111103171144354435333434333444444XL111103172458543534334533233555223XP111103172946334554444534333444435XP1111031744274554532445222233433331P111103175301332522334335142335122XL111103175638454545355544355555525XP1111031800083334342333223444443341P1111031803313433554155425545554442P1111031816204544443444443444444441P1111031822353554454554443444454451P111103182344553555445535444555445XP111103183213155555555545555555555XP111103183533555444445434333555545XP111103183608535555345554555555545XL1111031840425325553254444445552551P111103184127555535355335333555535XP1111031848164434443335342334453432L1111031848594344434340533553355431L1111031851013534444354353334454342L111103185145554555555555555555555XP1111031854214325553355333333432341P1111031901564543432344332434433451L1111031903533433234245354443443341L1111031905563444344243334555443241P1111031912414445555344453335553342L1111031919005535553133253433543331L111103192452444535555435443444345XL1111031928023555353445352333535341P1111031930485555553344444434544342P1111031931525545544454454455555551P111103193246345334535443353455345XP111103193318112322444332144445334XP1111031936425555253453332235553351P1111031937523455543344334445555552P1111031940145545552535342444344452P1111031940184344543445343433443241P1111031940194554344455443335555452L1111031943024535532444333334545351P1111031950103444343344343444443441P111103195648211554243514454445244XP111103195838454555144232444444554XP111103201044344245335545433445455XP111103201502445535535345355555444XP1111032015335445542345224525542351P111103201718454345233434333434334XP1111032021503435553444333344452442P111103202156523332445534342555335XL111103202417554545354554333555222XP111103202558554555335434344455444XP1111032026435355554554545455555552P1111032030405545553554544555555451P111103203104553555325555555555355XP1111032032155535443433354433545442P1111032033184444343344343444443441P1111032036345445355455433455544552P1111032036374343543344543434444442P1111032036444454434443452424444442L1111032038145555554443444455555552P1111032038524455553555254455543452P1111032039183444543244343444443342P1111032040123344443543453334453442P1111032040355545352353452244353132L1111032040543423313233234433234431L1111032041335545443344443434453442P1111032046464445543343343544443242P111103204815544555435535354455335XP1111032049314443354553342415553451P111103204946314531312535343255133XL1111032050405543353443454445454451P1111032057004554443355444335554451P1111032057095555443455553345553451L111103205836254544244544254455244XL1111032100144335542424222334452151P1111032102525445454444444445453451P1111032105564335553443343343443542P111103210640343545455434344455335XP1111032106563433345444444444454341L111103210947343445455434344445335XP1111032110085555544554455555555452P111103211025242232444333343424334XL1111032110374354445455455455454442L1111032111254535552244444545552332P111103211343355455554445343455555XP1111032113565555452454553455555452P1111032116503534245453353424554341L1111032117395444444444443344443341L1111032121035455553454453535545552P1111032121593332332324331323432231L1111032122564454445554453445454452L1111032123293535333433343344453341L111103212505454555555445454555555XP1111032130164443343443543334554232L1111032131274435444444343335443442L1111032132034555553454454435553451P1111032133104453442544343444453451P1111032136523555345355553345553551L1111032141115543552223455535453541P1111032143173545332345353344552241P111103214421342432343212232324233XP1111032144255554344343443334445342L1111032144424524333334353344342331P1111032153115554224424353334455351P1111032154053535554453553325553551L1111032154593445454555453455554441L1111032155245554453454544345555551L1111032159215355552555522255555551P1111032212243445554444355535553451P1111032214024434433333333333433331L1111032217043344443343233334444341P1111032218313253452445325335552541P1111032220065542432444242325554442P1111032226323524553444343335552351P1111032228203445435555353334544451P111103225005444444445455543455455XL1111032310105443345544443534453342L1111032319193223432344352324343331P1111032345183534443353332224343332L111103234810332453223334242434213XP1111030521205544444444333434454342P1111030600155445454454454445554551L1111030629105455554453343435555552P111103064445555544345555555555455XP1111030647525555554455555544445452L1111030705523535555535434434443351P1111030707483434332234334324344231P111103073420255555555535345555535XP1111030812113454453545354445554351P1111030812203543354434343423453551L111103083016555555444445544445534XP1111030839582245555545454335554551L111103091942454334133233253444214XP1111030930314444345453443345453341L1111030930323334355453443435453341L1111030932595435553353443434555451L1111030938305555555555555555555552P1111030950245444444343343334444332P1111030959395434352333243434432331P111103100134444454344344343444555XP1111031005154445532333242324444221P1111031028325523452555333545552151P111103103115555555445435455555535XP1111031032375555554555554455555552L1111031048123425543444244434353451L1111031049405555555555555555555552P1111031052015534554553344535555351P1111031113425553342333333325554331P1111031114224553352344555335454322P111103111636541545324535233555545XP111103112755555555444545444555445XP111103113120544555354535344555355XP1111031134064545554455454544554552P1111031151043445443233332434444451P111103122811444555444444444444444XP111103124003454534333534333454424XL1111031324324555545555343435534452P111103134209444444444444444444444XP1111031446505555555554454434444442L1111031500285334444543343434445331P111103151919442544444444354445344XP1111031533015555554555555555555552P111103153549545334344445455444555XP1111031557483424555455353335453341L1111031558043333343434343434443231P1111031800125555554155344445554551P1111031829233235453345444434454332L1111031831153444333323332443442232L1111031842384523231334253444554251P1111031904234355553343253425555542P1111031948521122552451354545455451P1111032003113225552434233335352142L1111032004454335422525243445521131P1111032041115445553444354544444331P111103205945334545345555354555335XP1111032111303333354422343323442241P1111032117065534434345342345533241P1111032133533334334344453434443242L1111032214024445553354334554453552P1111050748313544443244343444444341P0311050923205544343244344335434441P0311050924215534443433343435553342P0311050924265535452455453435553551P0311050924285553354444442423444242L0311050924304555554455554444554452P0311050924355435352453343535554252P0311050924365333444344454444334441L0311050924475555554554455555555552P031105092457444444444444444444444XP0311050925014444443333333433343342P0311050925185435553533453544443552P0311050925195555555555454555555452P0311050925295553553544352325555552P031105092530444444334444344444444XL0311050925394535351553533444453242P0311050925454335443443344444443342P031105092630554434444444344444434XP0311050926444335354445335555453352P0311050927105545443354353334453352P0311050927115345545544442235553341L0311050927123425555345212445551132P031105092735155555355435344545355XP031105092746443444535445333455245XP031105092749334534334432233434433XP031105092750333444224434343445454XP031105092841543555334343444555445XP0311050929105544443254353323344341P0311050929115535455444345525443551P0311050929345335444444343435353331L031105092934344453334044355345554XP031105092949333555224434333455354XP031105092950444454434345233443543XP0311050929515544453542352525555452P0311050930475555555555555333555551P0311050931414533553552233434552232P031105093151334434344434353354334XP031105093212454544344544333445444XP0311050932135535443434355433545342P031105093239553553244424353445435XP0311050934164535443543343535352451P031105093433544553254424353555435XP031105093509444444334544333454444XP0311050937194454555435543445442151P031105093746344333433434232344333XL0311050937484544443443453535343351L031105093750555555232233332355334XL0311050938185545554455355555553451P0311050940065555555555555555555552P031105094011454334343344353344343XP0311050940244445443343353344443341P031105094120555555535555244555225XL031105094128555534334335253335325XP0311050941484534443333343445543342P0311050942335554432422223334455552P0311050943015545453445545444454342P031105094418555555345535355535325XP031105094520554554244444354454434XP0311050945474544454554443344444351P0311050945534445454445433334455451P0311050948115534324553445525454551L0311050948114533454535353424453541L0311050948245334353333343323553241L0311050948594433333343242235352231L031105095104454344234434233444333XP0311050951055544345554435525455451L0311050951145533455445353555453541L0311050951315545554455454555554552P031105095156555544344435555444535XL0311050952005455543454454344554552P031105095219233322232423322353223XL0311050952414454443544243444444441P031105095306555555454545353555444XP0311050953145544544454444445444451L0311050953344445544443342334453342L0311050954385444335444553333354452P0311050955045554454355533444554342P031105095515544545455344344545325XP0311050955175545555454455555555552P031105095521555435455233334545435XP0311050956075554553454353434455552P0311050956205555555455454435455451L0311050957015555454355344445554452P0311050957363455553453353455555332P0311050957395535555345544433453451P0311050957584325334343335554453431P0311050958014335553553453455553231L0311050958274424444344343333453341L031105095838444444444444444444444XP0311050958593442434333333333332332L0311050959033535354355255535353251P0311050959214333345445354553342142L0311051000085544343434344454455331P0311051000294355452435354444454452P0311051000424455454153354445553421L0311051001025543343345343435453351P0311051001155555554445544445555451P031105100138545555343345443555455XP031105100148555354343533433555335XL031105100154454334435335333555315XL031105100204343445334324233444323XP031105100205455555334533355555345XP0311051002175535555333323434453531P0311051002281454554355134534435341L0311051002475555552335343555555552P0311051002524444433444452324433341L0311051002584525552244444445552332P031105100308554555555544554555445XL031105100325554433444433333444443XL031105100326333553252325344454334XP0311051003284554555555445545555541P031105100333455555344335344455555XP0311051003472344345553343434453242P031105100407555454334534433545535XL0311051004135455544144454545453431L0311051004135555554444544455553541P031105100456554555335434343555444XP0311051005105445553444454534444351P0311051005295545452355343335553241P0311051005325555355344343334445342L0311051005375525552334454444453352P0311051005443452425345541223452241L0311051005455555555555554445555552L0311051005475535553554354545554351P031105100600535223232343243344322XL0311051006105515555555555555553552P031105100612342555123333123455234XP031105100634343533234324445545244XL0311051006384433344433353434443352L0311051006555335555555553545453352L0311051006565555555555554445555552L0311051007154444343344332334344551P0311051007225454555355443325555552P0311051007535555525543555555523451L031105100753455554345535443555445XP031105100828454454354445343445455XP0311051010103544342334233423445341L031105101050332434244343334343344XP031105101122355335555454454555545XP0311051011323333332333343333343231L0311051012504443343434443344544332P0311051013365454354354343315553331L031105101405555545345435555555335XP0311051014205435354443343445452251L031105101440555555555555555555555XP031105101457345444243422433433444XP0311051015025543542444443335453342P031105101511555544334434343545555XP031105101524555555555555355555355XP031105101529434325254554242345445XP0311051015305544532353352425554352P031105101535333344343434344444334XP031105101549444554544444443444444XP031105101555355534425545445554324XL0311051016134435342434353434354441L031105101651454534455545244545335XP0311051017303545555555344324533442P0311051018294444444444444444443341L0311051018355554443444354445555551P0311051018404455553455353455553552L031105101909443534325225232445345XL0311051019535525553345255444552252P031105102015443434233333333444334XP031105102019555555223545343455555XL0311051020453433432343433323443341P0311051020515555554455542425555551P0311051021055555555555555555555552P0311051021244455453445353344443241L0311051021375525233223432423433231L0311051021395455453355344543555352P0311051021403234443333343335334341P031105102225342533525535222354325XL0311051022255554555555555555444242P0311051022584554444445555445545442P0311051023063445544445555555444441P031105102312344535555545333445444XL0311051023453544345332343334453342L0311051024023435442335442334553241P0311051024204533352555432334342532L0311051024284335543334333433453342P031105102433432523352535231525213XL031105102455444334444232233444333XL0311051024593335453345344444453232P0311051025044554454555555445545442P031105102536555555555555555555555XP031105102542554434334433344545445XP031105102552344434444534333455334XL0311051026225555553353323335555551P0311051026585554343453552555553352P031105102701444334233433232445333XP031105102936453455523445153444335XL031105103039454434344434334444333XP031105103048544555455544344454534XL031105103102553545255234444455354XP031105103134534444544534333555454XP031105103153344355333345545445345XP0311051032325545455355554445554422P0311051033414424343243343325553551P0311051033444534455454343425553451L031105103350353233245434222343323XL0311051033544545435553453335554552L031105103355444434544454454555335XP0311051033575555555555553555555552L0311051034065544543443443445443341P0311051034094412324243343223443142L031105103415552445435444323555325XP0311051034385535552553342325443351L031105103442553555555555543444335XL031105103504454545444544334555444XP0311051035304545555555550555553351P0311051035384545554333344335454331P0311051035415544335554544434555442L0311051035524555532553353455355352P0311051036054544454343333334453331L0311051036055434435454343334443342L0311051036184545543455344455555452P0311051036494444342344332224444341P0311051037161213153535351135431351L0311051038045555353555344444555352P0311051041515555444445455545554452P031105104227435554334534344443255XP0311051042504354335552252525555352P0311051043145445454445345445444442P031105104327454444345543334345444XP0311051044143434453434340445554341P0311051048075335553352323435552451P0311051048142335553243323435553441P0311051048244444455354354545454332L0311051049505534433343334424443532P031105105002545555555555555555555XP0311051050044445445555453535543551P0311051051364433333434542233454552L031105105224455555544525544455555XL0311051054015544554555354535553452P031105105630555444344435443455535XP031105105742343333544434251445355XL031105105825453534333523344555335XP031105105916543545535534555555235XL031105110015255535535555333555535XL0311051101474345455555455555454442L031105110246544444344434553444334XP031105110332455545533524344554335XP031105110501533422235533232555525XP0311051105162544452445343435553451L031105110531345333423343353335323XP031105110609444555354544232445323XP031105110626454555334545444555444XP031105110637332545243533444545334XP031105110723454555345555354455345XP031105110913452454234453233445233XP031105111012343545332534444445334XP031105111043553455454534333555355XL0311051111375555555555555555555552P031105111156443544443334234454235XP0311051115155553245553253555555552L0311051115564454545444433434544451P031105111706554555345535554555545XP031105111941455454333433444444324XP031105112146554544535454434554445XL0311051123525555555555555555555552L0311051124333545443555444544555552P0311051127214555443354343344443341P0311051127535555443454343445555552P031105112846335445455545353555455XP0311051129205443353443453445454451P0311051130245555453555343435555552P031105113051554444333534334444334XL031105113222345434345444243555324XP0311051134053552254253353215353551L031105113917343353435445332545234XP031105113930545543555334453545444XL031105114217253545555534334555325XP031105114307543245345345444555233XL0311051144283445354544353424453232L0311051147514432342233351434553141P031105115008543554234535545432532XP031105115058554555555555355555555XP031105115527443554545535354545335XP0311051156033223252253342325452422P0311051156234443344523343224453341P031105115935554535245533255555445XP0311051159584444344434353334443342L031105120038454435344435443555334XP031105120425333333343333333443343XP0311051206445344554543353535553551P0311051208554555352255532335533552P0311051210015535444343153545553451L0311051212065354453243443534455542P0311051212343434455543343334443341L031105121319443555345434344555353XP0311051214325545553455453545554552P0311051214425554433334343344443242P0311051214483333544553553555555352P0311051224004345544343243544443242P031105122651544434244244243545445XP031105122840444444444444444445444XP0311051231574444333443333323344441P0311051234075544444444443434454351P031105123939534434444333343444433XP0311051244463334345344455534443341L031105124751453555545544553555455XP0311051248175544443443333445553442P0311051248335555453455455455555552P0311051248385535432433553454443332P0311051253125545445454353345553352P0311051257103445445345433434555451L0311051257404444434443353334444342P031105125817443454454535345454334XP031105130014454555434535344554435XP0311051302004334343333323434433242P031105130314434344334333444444344XP0311051308285434444444344334445331P031105131101243223332324331435333XL031105131603555555445435554555544XP0311051317075545444344443434554342L0311051321505555555555455555555551P031105132322555555555555555555555XP0311051328525555555555555555555552L031105132923444545344544454545345XL031105133107543533555435233555345XP0311051332215544332334342334454232L0311051334323335553333345554342332L0311051334445545554545454555555452P031105133519555555555045555555525XL0311051336244534353334443435454342P0311051343114454444444553434445142P031105134750332544424434333444334XP031105134810544434343424433445424XP0311051348375545345555354545552332P031105135039443555444534454545334XP0311051350464545544554352424443342P0311051352115554344444344545554342P0311051402004345455455354544554451P031105140539343545334454353555455XP0311051407384534555554253455553452L031105140834443434444434444444434XL031105141249344425545355254545554XL031105141819555555555555555555555XP0311051436401312343143412242124331L031105143642555543232523342355555XP0311051441013424553343332445453331P031105144503554544434545443555545XP0311051501354434345444243445553442P0311051507125325534332333434443342P0311051511235444543344444435444442L031105151144455554445544333445445XL0311051511454544444445454434443442L0311051512593533454335343335333342L031105151457532442334415444445544XL0311051517355545555555444445555552L0311051522314545543455343445554351P0311051525584434343444333334442231P0311051545423354443454453535553341P031105155313555555455455554554555XP031105155405555555555555555555555XP0311051554064444444444444444444442P0311051604294344343444344444454341P0311051613444334443433333433444341P0311051618115545353445543545554351P0311051645485534543345334434453251P031105165407554445334332443545434XP0311051658105444554454555435554451P0311051700533334343333343444443332L031105170155343334233334334443333XP031105170220454545545555455555445XL0311051729405454442244442224444252P031105173641552555454355443444255XP0311051737193244554445454534343451L0311051747385533551434343325533131P0311051750045445353445433555544552P0311051754224455455555454555555452L0311051800404334443344333333343341P031105180115555555445555444555545XP0311051808055533254345352435553542L0311051818505525553555354445552352P0311051824505344453452333545343452P0311051827465535442454344555453252P0311051831165535353445333545552352P031105183156445555555555555555555XP0311051833385555454245354545554551P0311051835544343334333332324343341L0311051841195554345444353345555351P031105184145554424344444442555434XL0311051848275555554533554555552552P0311051853135555453355343435555352P031105190030555555345545555555455XP031105190159443433343333343434334XL0311051915353533332223331445453342L031105191930555555255225255555435XP031105192622255345254534354555434XL0311051927385554554554554345555551P0311051932483225352544443334343242L031105194024444544334534433455245XP0311051943444534333334353444343331P0311051944125555454554244335555552P031105200852454334434322344433223XP0311052009244444443444444434444441P031105201055555554323234343555353XP031105201724445533555555335545555XL031105202026443455444534344555335XP0311052030215544443353343434442241P0311052035095545455555554444554452L0311052042193433442443453435553252P0311052100334345554444444445554442L031105210132344555335545343555334XL0311052116484333234444232424323131L031105212349343445325333333555335XP0311052130251225554555454425554551P0311052134224535555454443444453342L0311052135165545554555444545554552P0311052135343345343344443434453332L0311052137091353552355154555555552L0311052144574454432233143224435241P031105215013444455555454334555344XP031105215253555555335555555555355XP0311052205585553353553333235555351P031105220830443343444444455455444XL0311052218565435552454352325553232P0311052221193333442343342324342331P031105222552453523455424354545425XP0311052236525444553344454534554342P0311052252365443345444444444444442L0311052300355345445544534555434341P0311052325395555553555555555555551P0311052337194544343343353334445332P0311050457354534343323343444443332P0311050458173443333343333333444341L0311050622115525443345352334443241P031105093142342534353425343455322XL031105101021544554444445245444554XP031105105317553535544435334555223XP031105121802555455455455555555545XP031105133721223222132232122424233XL031105135436344435545435333444435XL0311051700533334542332353534453332P031105184419443443434433343345333XP031105184449444444444544344555455XP031105194257444335444534443555544XP031105203444554555445433444555455XP031105213221454555434433344545334XL031105101113454544344433343445324XP031105104234343455333333233445333XP031105104553333455333333333445233XP0311051449403344434343343334443342L0311051137305534453444353455553352P0311051137485454454355552335552252P0311100757104444443544333334444241P0511100757255555353553353555555552L0511100757504334443444353434453241L051110075828453543344433333444443XP0511100758364533343245343335553241P051110075933555555535555555555555XP0511100759444344355445454424533451L0511100759453435552243424445453551P0511100759484441112344342323444441L0511100801073345543345343444454352P0511100801284455455455454545554451P0511100801495435354444443455453351L0511100802105534443444334444442241P0511100803103432232334333325554431P0511100803204445443444444444444441P0511100804504344544444444444444442P0511100804575544454555454545553251P0511100806344543342443343335454341P0511100807275555335155554324555451L0511100807394444443343343334443441P0511100808353334443343233324343341P0511100809085554553555333333353541P0511100810145555455555253345555551P0511100810474555355453353445553351P0511100810504444443444343334443341P0511100811255544355554553345553551P0511100812324444445354443334443331L0511100814414432234433231413332121L0511100819235553445355352425454432L051110082013444434344335344433444XL0511100820344434433343433334443331P0511100822394445454445444445554441P0511100825574444444444444434444341P0511100827474444544455443435553442P0511100828135555552555344555554352P0511100828224434433443344434443342L051110083033554535534444354354334XP0511100834115555454245354545544551P0511100834324545445443454345454551P051110083553333325454443242545224XP0511100838574534353443443334553341L0511100840014545555344443335554341L0511100840305445542244242223555541P0511100842174434443444434444443432P0511100843204455442233233444444451P0511100848055335453434543435554341P051110085127544544545554433555545XL0511100853504445553554444345555551P0511100854454435544543442335551451L051110090003443444424444344443324XL051110090019553435535435233555322XP051110090850555555334333445554435XP0511100911024555443352343444444341P0511100914004544443444443444444541P051110091401454454454435355455335XP0511100915064434443344343444443341L051110091526443444343333332334434XL051110091556444543445443333545445XL0511100925344555553454434435554551P0511100929024334343343333334443241P051110093041553545345334453445244XP051110093115554555455454555555555XP051110093133553335445533333455335XP051110093324433445354335445555445XL051110093341555435555555555555555XP051110093532455444544445344445445XP0511100935425554444454343444554351P0511100937125445553445334545554551P0511100939453455543445343344555552P051110094129555555555555555555555XP0511100943025544353343333334445352P051110094800544555455455444555555XP0511100950104334334345532324443341P051110095132453334315335254545315XL051110095311554555335444334555554XP051110100031454555435443335555345XP0511101004405555555454253555553451L0511101015163545444444554435453342L0511101015255554445555353555555342P051110101807444444444444333343454XP051110101840555545234532333555235XP051110102110453444454444444455255XP0511101026225333553353343345553341P051110102814445454455554454544444XL0511101035033424223222432423333231L0511101037155424453552222545552232P051110104105451535232535432352123XL051110104339543343335544233534324XL051110105705454545434454444444444XL051110111009454434334434343443354XL0511101112295535555355555555555551L0511101124264454431343553345555531P0511101126154434543445343423442341P0511101126313444352344343435452351P0511101128494422343234332333342232P0511101130364544555555454445554452P0511101140305555552555354455555551P051110120046332455245355155555255XP051110120732555555544515044455555XL0511101211385534454454445435553351P051110121142353455555434354455322XL051110121201534425334554435342323XP0511101214594544344342333434443342L0511101238294543342434232432443341L0511101257015433445544454545554441L0511101336263444433333343433343342P051110134838433425555535243555224XL051110135030433534235555444455234XL051110135057443444453334434434323XP051110135158553555335334433555332XP051110135211553545455333344555334XP0511101353575545435555553555533451L051110141222534555544435334555553XP0511101424215554454444443433554532P051110143858444454434545443555445XP051110152329344545434543343554344XP051110155628555555434334344444335XP051110162550555535344425555443535XL051110164226333445444433344545335XP0511101716424345554443444445454442L0511101847285555555255444545554451P051110185028443554543334344455335XP051110185122454455353535444555415XP0511101902245554453455443545555351P0511101905184544435544543445343351L0511101909424434444544345544543351P0511101924003443333343333334344341L051110194634455555445444454555555XP051110195056543323334454343545343XL0511102035545445553444434445454541P051110210013555444344435443455535XP0511102107375444455444454445555441L0511102126235555355454353445555552P051110215307444555334544345355445XP0511100329575445444444344444555442P0511100551245544355555354545553352P0511100622255443443344333334443441L051110235331553544344543344344335XP0511100832225535553343353434553352P0511100833035555353554343345555352P0511100833415534544444343324443342P0d11100834085555345554553345554552L0d11100835173323252242443434442422P0d11100836015434343333213443333232P0d11100840054443342332552324445442L0d11100842175545554454454445554552P0d11100844285555454455554445555452P0d11100844334444343443445554443542P0d11100844475454554454553545554442P0d11100848532424353444444434452342L0d11100856513545544443433324444332L0d11100902295434452555223445552232P0d11100907593334343444353433453432P0d11100908165555553554554545554542P0d11100911495542242523352334544352P0d11100912065445454441353535555452P0d11100919194443254444352324443232L0d11100920365555555555555555555551L0d11100924374424452344454224443241L0d11100932044444444444353435543452P0d11100935015445543444444434453452P0d11100936364555554444454545555552P0d11100939305555554455555555554552P0d11100949375555554444345545455552P0d11100953494455554454544545545452P0d11100954003425554345213235552122P0d11100957585555555455554455555552P0d11100959065555555555455555554552P0d11101010404444434443343334444332P0d11101018345545445555454445444551L0d11101019294334444434444444444441P0d11101030373344334323332425553452P0d11101113524445544342242444443242P0d11101127064444352222322334453442P0d11101127365534554444434444553342P0d11101129345545544454454555555552L0d11101137415344353333353335554232P0d11101137415435442333353335554232P0d1110114005443334333423232333453XL0d11101149244344344444443435554442P0d11101208215433452345354535552352P0d11101219383455533354253445453532P0d11101226425444444444444444444442L0d11101236134544444554443454444351P0d11101355165444444454544444444441L0d1110135526443435555545233555335XL0d11101357354444443444333334444341P0d1110140211555555555555555555555XP0d11101403214334543443343334443342L0d11101410165444455453353435554551P0d1110141148544555545545454554444XL0d1110142125444444444444444444444XL0d1110142308454545424345333555325XL0d11101428085544445444344545554342P0d11101449055543344344453344455441L0d1110150706342455444334433455235XP0d11101603585554553455454555455551P0d1110162904443444243334333444334XP0d1110163548554454434334353545324XP0d11101658154444343444333444444441P0d1110170118444545444444444545444XP0d11101702373433344333343333333441P0d1110170402545555445555555555555XP0d1110173831443555333333445554435XP0d1110174806454454434444343544445XL0d1110175550444455555454334555345XP0d11101815573324521223353433451221P0d11101817015445555555554554554552P0d11101818142224442223353334451221P0d11101821453455344454553434445452L0d11101833255545355555355555553352P0d1110183328343434233333223344423XP0d1110183427444454444334343445544XP0d1110183510555544343425555444535XL0d1110183939453443433343443345335XP0d1110184558453554544334344454335XP0d1110191706544444444444444444444XP0d1110192101333545223334443355354XP0d1110192238343545223334344455354XP0d11101922503344443332233334343341P0d11101926023334443332233334343341P0d1110192743555555555555555555555XP0d11101927483334443332233334343341P0d11101934555554443343333345555551P0d11101936125555553343333345555551P0d11101936595435553555253555455551P0d11101940173545555555355545553351P0d11101941034444434544343444455541P0d11101941105444344455344435555352P0d11101941225545555555355535552251P0d11101941584444443444444444444441P0d11101943275555554343333233443442P0d11101944254555543454354434553451L0d11101945195555554555554545555551P0d11101949054332344243233414453232P0d11101953165555554555554445555551P0d11101958144554334544344445455541P0d11101959525444543344434433443441P0d11102006263532341332212334543151P0d1110200812444534354443534444555XP0d11102010085523141332112435544231P0d11102012305523252332112435443131P0d11102013595433344343343335553341P0d11102122235445445444344444454252P0d11102138154444444444353344453442L0d1110052508333444333434233444333XP0d11100627014544434435444434445242P0d1110081509331334334413333444434XL0d1110112314443554453444445545334XP0d11101132385445554444454545554451L0d11102100044333234233344435343232P0d1110213949555555555555553555545XL0d1110135220435545334433344555524XP0d11101352375555555455554335554351L0d11101353094324553333353444554342P0d11101353454533352355353235553251P0d11101353573434334355553334452341L0d11101354043344343334353333453342L0d11101354185543342344222225553141P0d11101354305555555555555555555552L0d11101354415544553354444444555352P0d1105135452434555334433344555524XP0211101355014343333333344333343342P0d11051355064533352345352435553251P0211051355084333443333353354453342P0211051355225555553555544444554352P0211051355535544342344231225553141P0211101355585555553555544444554352P0411101356224434334355453334453341L0d11101356254533352345352435553251P0411121356365555553555544445554352P0811051357043333443333353454453352P0211101357113454443444343234543331P0d11101357115544332333221225553151P0411121357424533252345353425553351P0811101357533433342423343434342242L0d11101357565343444433344535433242L0d11101358005524552335552324543231P0d11051358043433334355553334453351L0211101358175554555555444534555541P0411121358265543532333231325553151P081110135831553455535433433555344XP0d1110135834454544344322344445335XP0411101358454444445444343434453442P0d11051358584434544343434444443441P021110135858455344555554445455555XL0d1110135909444545425545445555245XL0d11101359234554554554333445454551L0d11101359295454444243442434545342L0d1110135938444435244434344444344XP0d11101359443533434355453234353351L041110140000443435555545233555335XL0d11101400025555453245443534554551P0411101400054434454344333345452322P0d11101400084323343344333444432431P0d11101400114333543333353454452352P041110140015443555344545455555335XP0411051400304343444333334444433242L0211051400355454244354353345544441L0211051400363345544434343334543331P0211101400375555555555554555555551L0d11101400385555555555555555555551L0d11101400435534543455344335552341P0d11051400433333332333343434443242L0211101400435555555455554535555452P0d11101400444434544344434444443441P0411101400444535452244442414353451P0d11121400483433434355553325353351L0811101400495444454455454535554441L0d1110140058444444244443344444344XP0d1110140108333333343333322343333XP0d11051401094555233545353434553251P0211101401115543453244454555555551L0d11101401124444445554545455555551L0d11121401125554555545444544555541P0811101401135544553344253424453241L0d11101401145453254554553545445551L0d11051401165554544555345445554551L0211101401275525552335552225342351P0d11051401354335455343345555453152L0211101401384545453445334435553551P0d11101401434434444444444554444442P0411051401505555555555555555555551L0211121402015555554255444535554551P0811051402024444444344433444453442P0211101402094535453354453445553552L0d11121402094333543333353554452352P0811051402125555555455554545555452P0211101402134333434333333444433242L041110140214535534545355333555555XL0d11051402194535452345441414452451P0211101402245544554455334345552251P0d11051402275553455555454455453551L0211101402275555444354444445545442L0d1105140227443555345545455555335XP021110140229545555425555445555245XL0d1110140233444444444444444444444XP0d11101402353345544445343335543331P0411051402374444444444444455555541L0211101402505554555555344445455541L0411051402594323343334333444532431P021110140304355444345333343445335XP0d11101403055555454355354555555551L0d11101403125455555555554555555552P0d11051403225554344555454544444551L0211101403245554533343454345555352P0d11101403295555555455554545555452P0411101403304444444344553435444341P0d11101403354543343455353555553342L0d11121403403335544445343334553331P081112140344443555345545455555334XP0811101403465535554455345345552251P0d11101403534444444344334444453442P0411121403544333434333334444433242L081105140354545555555555555555255XL0211101403555553554454555455453551L0411051403564454444342452434545242L0211101404015555555555555555555552P0d11051404074433433343352334442331L021110140414553454555434343555334XL0d11121404145554554555344545455551L0811101404335445553444443544555552P0d1110140435454454444434444545335XP0d11121404364445454445554554555551P0811051404365455555555555555555552P0211121404375555555455554545555452P0811101404455535353253233225555551P0d11121404515553444345554445553551L0811101404514534554444544545553452P0d11101404535554344344343335444451L0411051404563434333334333324443351P0211051405125555555555555555555552P0211051405154553343455353545553342L0211101405155554344555454444444551L0411101405174323343324323444432431P0411101405245455555555555555555552P041110140527545555525555555555255XL0411101405375555454453455545554452P0d11121405404434444344434444453442P0811101405424444444343452434545442L0411101405553524232333532513332121L0d11051406034444444344553335444331P0211051406035435445345353425455351L0211101406054515354235223223331241P0d11101406065555555555555555555552P0411101406135535552335353525553351P041112140616553335335535232555535XP0811101406174344253553442215452241L0d11121406245455555555555555555552P0811101406314455453454343445454451P0d1110140632353544544343344545435XP0d1112140643555555525555555555255XL081110140646453444555334343545334XL0d11051406505524443443333324444332P0211101406545553353445354545553352L0411121406584323343334223444432431P0811121406595555555555555555555552P0811121407055554344554454544444551L0811121407175454344344353334444451L0811101407204443344333452324443341L041105140722554454444434444545335XP0211051407265544554554444535454452P0211101407284544333443333234455341P0d11101407285545554455444445554451P0d11051407415535352253332215555551P021105140741542544234435434445333XL021105140758553444555434335555555XL021105140802555544344444444545444XP0211051408245554545444252344454351P0211121408265553343455354545553352L0811051408334515235235123232321351P0211101408353445443433444444553552P0d11101408395445554344333345453251P0d1105140842454555554555454555455XP021110140848555555555555555555555XL0411101408555435545443250424453241L041105140900353554445333343555535XP0211051409055445553454455335554452P0211051409064344343453431115453251L0211051409164434332443343434443331P021110140922533555555455343555235XP0d11101409244445444444444445454441P0411121409304444444343452434445442L0811051409325544353454555544554352P021112140933555555555555555555555XL0811101409335554344344353334444451L0d1110140936555554444434444545345XP0411101409375535353353332225555551P0411101409414445454344553335444341P0411101409455544554545444545554452P0411101409524544355555355555553252P0d11101409545545454544254555445352P0d1110140955543545243435434455332XL0411101409583244343343443343454332L041110141001444545434555344555445XL0d11101410155354542345453355555552P0d11101410175554535455253354554451P0411101410455545554454454335554452P0411121410474445454444444445454441P0811101410564410333235123323321251P0411121410595535353353332225555551P0811051411015444554344334355453351P0211101411024555554555455535553351P0d11101411094344353453441115453341L041112141112554454444434444545335XP081110141116353555555333353555535XP041110141116533555555555353555235XP0d11051411194445444444344445444442P0211121411224544343454343335553341L0811121411275554445354253335554451P0811051411365545554454444445554451P0211121411494445444344553335444431P0811051411495555555555555555553351P0211121411505435445553253424444351L0811121411545555555554454445554552P081110141158555434444444344444434XP0d11051412025355452335453355555552P0211101412214445542444454333544441P0d11101412245435554344533435553331P0d11101412265555555444252345554351P0d11101412364444333343453334442341L0d11101412385555555555555555553351P0411051412383525232324532413333221L0211101412425435554344334455454351P041112141245353555555333353555535XP0811101412544444444444344444444452P0411101412575544532234343325554352P0d1105141258454544344555445555445XL0211051413035442251454342445554542P0211121413094415335235123323321451P0811101413115534453455343444443342P041110141319533555555555353555235XP0d11101413235354553355453355555552P0411121413315555555555555555553351P0811051413352424342325221225553241P0211121413584444444444344444444452P0811121414054344354344443334443342L0811051414065435554355533545553341P0211101414104335445455352235553232L0d11051414195334442444355555552232P0211121414265355353345453355555552P0811051414413534345435443335453351P0211121414505535353455343445543342P0811101414535535555555553444552532P0d1110141508533555555455353555335XP0d1110141508333333233333333344333XP0d11101415215545554454444445554551P0411101415285535554355533555553351P0411051415355544542333343325554342P0211101415405555554555553555555551P0d11101415435555543435542435552342P0d11101415505552251452242445554552P0411121416083325552243434445553431P0811051416395535555555554435555552P0211101416424435454544553534554341P0d11051416435555555555355555555551P0211101416525555544453154555555551L0d11051417074434444444333535454351P021105141723333333333323333344333XP0211101417285545555555555555555551P0411101417355544542334343325554352P041110141736533555555555453555335XP0d11121417395545554454444445554451P0811101417484433445535333344553351P0411101417495545544445344445454442P0411101418105545443345543435553242P0d1112141820444434344544444445435XL0811121418345555555555553555555551P0811101418404444443443333535454351P0411101418405535555555555335553552P0411121418425554553454554445455551P081110141856543555334334343345334XP0d11121418585535555355535555553351P0811051419315555544545453444444341P021110141939333333233323333344333XP0411101419445545554344533555455552P0411121419545552251454242545555552P0811121420004444444443333435454351P0811051420045545553445543435554452P0211051420415555554453154555554451L0211101420492333342344443425454241L0d11121420515535555555553555555552P0811101420523125222334344322553131L0d11101420545535544544453433554351P0411051421055555544554454445555452L0211101421114535334432234443443341P0d11101421143443333343333323344341L0d11121421165555554445533455554552P0811121421175455455551452545555552P0811121421194443355535332335453351P0811051421433312522455232433344251L0211101421455544542334343335554352P041112142213333333233333334344333XP0811101422245534444444444444433442P0d11101422265545553455543435554452P0411121422424344343453442225454341L0811101422575555555555550555555552P0d11101423185554434345353333433331L0d11101423263443333343333333344341L0d11101423295523342445223545552231P0411101423375555554443154555554551L0411121423475544542334343335554352P0811101424145345444334343424553241P0411121424394545554544453434554441P0811051425005555555455534455555552P0211121425015545553445543435554452P0811051425153443333343333333344341L0211051426063434443344433425553351L0211121426085555554453155555554551L081110142631333333233333334344333XP0d11051426325444544455444335554451L0211121426445523442535323545552251P0811051427095553352355553325553351P0211101427253443333343333333344341L0411101427254443443344333334443441L0d1110142726343344344335343354224XL0d11101427573333454445334325553351L0411051428085545443444444444444442L0211101428085555554455354555555552P0d11101428124435445444553435553551L0d11101428184444444444444444444441L0d11101428465544544445544335555451L0411101428565445352244343434554241P0d11101429025553352355552325553351P0411101429084444444444444444444442P0d11051429324443443344333334443441L0211121429324535454333443434454341P0811101429343555455555455555555552L0d11051429355555555555455555555552P0211101429394444444444444444544442L0411051429453535553433353335553352P021105142947333343234435342344324XL0211051430244435545444553535553451L0211121430374444444454554544444552L0811121430393334454445333325553351L0811121430415553353355552535553351P0811101430465534544434342324443332P0d11051431055555555555555555555552L021110143108554545545455554554555XP0d11051431245445352344352434443241P021110143135443444555435445555335XP0411101431465314455444454445454451L0d11051431484444444444444444444442P0211101431494443443344333334443441L041110143153342343234435333344224XL0411101432025555555555555555555552L0411051432105534544444342334443342P0211101432234545535534353423442431L0d11101432295543343333343444443342P0d1112143232545454333554445323355XP0811101432464435555544543535553551L0411121432465555555555555555555552L081105143250554554545554555545555XP0211101433075445342344352434443241P0411121433124443443344333334443441L081112143320342343233435333344224XL0811101433244444444444445555555552P0411101433305534544444342334443342P041105143423545545555545555555555XP0211121434265534544444342334443342P0811121434375545445454545454545442P0811051434385553342333343444443342P0211121434394435555444543434543451L0811051434415445355445452345553551L0211121434445445342344352434443241P0811101435024543352433433434434351P0d1105143528455444454554555544555XP0211121435415444544455443335554451L081110143551555554444445554555555XP0d11101436075543333333343444443342P041105143658334434434343333444334XP0211051437104444343444343434444441P0f11051437295533335444343433333332L0f11121437455544343333343444443342P0811101437514425555455454245555451L0411051439163335544555544535534341L0f1110144043344445434333343444334XP0411051441004444343444343434444441P0211121441044435555445354545555451L0811101442354444343444343434444441P041112144320444444434333333445334XP0811051443265445444455354445555552P0f1105144346555555345544454555545XP0f11051444084554545554444343333552L0f11121444404444344444343434444441P0811051445035555554555555555555552P0f11051445455555555555555555555552P021105144632444555444534444555445XP0f1105144648444444434333333445334XP0f11051456094324455343313345552332P0f11051456375555453554554345544551L0f1105145657533434554434334555453XP0f11051457535555555555555544445441L021105145916444555354544343454325XP0f11101459315555555555554335555551L041105145944534445445434334545453XP0211121500355555555555555335555551L081105150104544555545545454554434XL0211051501054543352453323435434351P021110150151533445534534334555354XP0411101502324543342453423435333351P041105150233544555545545453554434XL0f1112150317533455535435334555354XP081110150338544555555545454554434XL0411121503545553352453423435433351P081112150437544555555545454554434XL0811051504533443334333333333433331L0f11051505165544544453454535554441L0f11051505385355555455454555545452P0211051506025544354455543444455441L0f11051506333433333243333333333331L0211101508045555555454455435555552P0411101508063433333333333333333331L0411121509103433333333333333333331L0811101509224432452233251424453131P041105150925544434454455152453554XL021105151008223523533243232555245XL0f1105151102555555343434353555352XP0f11121511104433452233251434443131P081112151112555433234434354435545XP081105151247543554343335333555455XP0f11051513593324452223253434441131P0f1105151419545555444445443555555XP0f1105151510555554444445333555555XP0f11121515503324443224353434442241P081105151918554555434455333555555XP0f11051520495535242444322324443331P021105152052555555444445333555555XP0211051521175534344444444444444451L0f1110152148555555444445344555555XP041112152235555555443445554555555XP0811051524005435444444444444443341L0211051524075545444454353344555352P0f1105152415543445535545343445235XL0f11051524355444545554453334455442L0f11101525155540444444444444344441L041105152600555555555555444555555XL0f11051526095555544444353334455352P021105152620345325334554252455535XP0f11051526265455544444443334554442L0211051526353323453233442424443332P0f11121526395544444444444444444441L0811051527085553433453253233555351P0f11101527275555554444353334454342P041105152737445325335055252455535XP021105152827555555555555544555555XL021112152830555554433334334555335XP0811051528383323453222442434442332P021110152858345325335555452455535XP0411051529165553333553453324555251P021112153003345325335555453455535XP0811101530202323543222342444442222P041110153024555555555555444555555XL0411101531295553333553553324555251P0411121531593323442222342444442222P081112153206555555555555444555555XL081105153229555555444545445555545XP0f11121532555553333553353324555251P081105153458555555444545445555545XP0211051536144554553255553345555551P0f1105153728335535334445255435325XP0f11051537535454553355553435555551P0211051538555442243244443433433242L0f11121539245454543255553435555551P081105154107555535323435255535325XP0211051542054555545453555444544351L0f11051543175544554455554555433251L021110154340555535235445255535335XP0411101544205555445553545545453551L0411121545135555555554443555453551L081112154524555435335555255535325XP0811051552054445433343353334433332L0f1105155306244323444334222333324XL0f11051554185453533242435433534332L0211051555413345343443343444442332L0f11121555514443342443332334453241L081112155812554555555555555555555XP0811121600154334343434333434443331P0811051601165555555455555555555551P0f1105160239333554333334343335323XP0f1105160511333455333334343435324XP021110160648333455433334343335324XP041112160846333455333334343335324XP081105160950445445454445333545444XP021110161214445545454445433545445XP041112161355455555454445443545445XP0811121619584543352443243435454331P0811051620323335334333233324344441P0f11051626205543555545355443545352P0f11051637244443352243433544344341P0211051638375545555555555555555551P0f11101639214443453443333334443341P041105163957355125555545433343535XL0f1105164139524525235525252555353XL0f1105164225355125555535333344535XL021105164430525525345525252555553XL021105164455455555335543355555335XP0f11051645005535453553553535553452P0f1105164514454454434445343544444XL0f11101645534444342343323444444341P041110164631535535545525252555553XL0411121646434443443443333334443341P0811051647195535453554553555553352P021105164740424454434445343544444XL0211101648445545453554553555554352P041110164948454454434445343544444XL0411121650325535453554553555553352P081110165051554555444444445555444XP041112165223554555444444445555454XP081112165231444454434445343544444XL081105165252443224244333255344315XL0f11121653154444343243333444444341P081105165341554555444444445555454XP0f11101702185554444444533444444342P0411121703565554444444533444444342P0811051706535355555555454445552351P0f11051708375545554555544555555452P0f11051712145555555555544555555452P021110171637555555555555445555555XP041105171736555444335445454444435XL0f11051718285543445553343432454532P0f11051719065534454445343335553332P0f1112172005555555555555454555555XP0811051720465543455552343422453522P0211051720575534554435343335553342P021105172128555555555555454555555XP0211101722145535553335333335553332P0411101723075543455544343422453522P0411121723585535553335333335553332P0811121724315543455443244423453522P0811051725455555343434353435455341L0f1105172644444544434434333444433XL0f11051730025555555555555555555552P0f11051731005555555555555555555552P0211051731025555453354453335454352P0f11101731425555555555555555555552P0411121732245555555555555555555552P0811051734035555453354453345553352P0211101735305555453354453345554352P041105173709553555444554353555335XP0f11121737505555454354453445554352P081105173901553444444444444444444XP021112173908554545555555555555555XP081110173954444444444444444444444XP0411051740363554433343433544554551P0f1112174104444444444444444444444XP0811051742473555444543444444454551P0211051742595555342455332423434241L0f11051744195555343434223444434341L0211101744464555445543434444454551P0411101745215555343444423433445341L0411051745254444443344343434443352P0f1105174531433433342433343343435XL0f11051745335543444443334444444551P0f11051746525445343455544333434441P0211051747024444443344343434433341L0f11121747145554353354433433434241L081105174810543555234534344455334XP0f11051748254444443345353435533351L0211121749054555444543443444554551P0811101749435544553355353435533351L0411051749554444443344343444453352P0211121750495545553355353435533351L0811101751314444443344444444443352P0411051752384435443344343325444441L0f1105175251353333333333232222133XL0f11051753173234345342344344443352L0f1105175331122121212133333333333XL0f1110175414131333333333335333333XL0411051754464534453334343435554551L0f1105175500133333333333313313131XL0f11121755214444443344344444443352P0811051756093544454433443435345431L0f11101756415555555555555545555552L0411051756554444444444444444444441L0f11051757414444444444444444444441L0211051758004435333323232333334331P0211101758314444444444444444444441L0411121759274444444444444444444441L0811101759364435332323233333433331P0411121801234433333333332334344231P0811051802124445453454343435453351P0f11051802403545555443443425445551L0211101803264555453444444545553351P0411101804075554545555555554354531L0411121805525545555455555555555531L081110180721444045223424243444444XP0411051808215555454455445445554452L0f1105180823555555335535355555555XL0f11051809244544554555454444554452P0f11051810574544554555454444554452P021112181128444444333434243444344XP0811101812014544554545454444554452P0411101813225455554444553334554442L0411121813354544554555454444554452P0811051814185545455344454535554451L0f11121814384455544445453334554452L081105181500444554243343342545233XP0f11101816214455554455444555555552P041105181703444554333343333545234XP021110182003443554334453343544334XP041112182029544555545555444555444XL0811121820584543344342433444443342L0811051821234434443334433424343342P0f1112182149443555334453333544334XP081105182154544545444444444555445XP0f11051823204433443343333423343342P0211101824534433543334433423443342P041112182456553544334243452555243XP0811121826204534543333332523443342P0811051826484555544455454555555452L0f11051829331332333223233344344432L0f1105182958325445345545352555455XP0f11051831295555555555455555555552L021105183145435445345545352555455XP021110183323445445455545352555455XP0411051833535545553555454444545551P0f11051834114555453445433345555551P0f11051834385545555555555555555552P0f1112183512445445355545352555455XP0811051835425555553355333445555451P0211051836045545553555455445554551P0f11051836145555555455555555555552P0211051836285555553555553335555551P0f11051836355555552355354455545451P0f11101836515555553454433445555451P0411121837585555553453334445554451P0811051838065545553555454555554551P0f11051838105555553555553335555551P021105183811454444344434343544454XP0f11051838155555553355454555555451P0211101838165555555555555555555552P041105183915454444334455443433344XL0211121839295555555555555555555552P0811101839485555554455454555555451P0411101839545454435444445445454431P0411051839595444343554445554555552P0f11121840375543545544444543444451P0811121841095555554455444555555451P0811051846074554235444444444444442P0f11051846585545343445445555555552P0211051847274444444444444444444442P0211101848334444444444444445444442P0411101849135555555455555555555552P0411051849174434443343333334443341P0f11121849344444444444444444444442P0811121850395555555455555455554452P0811051852004434443343433334443341P0211101854034434443343433334443341P041105185427555555555555555555555XP0f1105185525455555555555555555555XP0211121856104434443343433334443341P081110185614555555555555555555555XP0411101857324535544443354433443432P041112185738555555555555555555555XP081105185742555544345455344444445XP0f11051858225555544443344444555552P021105185838455555535355443555555XP0f11051859115555533345353434355552P0f1105185922544433333334241444424XP0211051859514533434342443335443432L0f11051859595355455553354535553552P0f1105190000545544443444333454454XP0f1105190015555555555555555555555XP0211051900465555533455353324455552P021105190051444333333334241454424XP0f11051901024555555555555555555551P0f1105190103555555554435222555555XP0211051901124435553333233334332542P0f11051901134534343433343434443332P0f1110190133555545555555555555555XP041110190143454455344334333444444XP0411051901585335555553355535553552P0211051902074555555555555555555551P0f11051902084345554444444445453452L0f11051902114433334343443334443432L021110190212444443343334241445434XP041112190221555555555555555555555XP0811051902263444533333222223444341P0f11101902435555533355353334555552P041110190246555555335245222555555XP0411051902525435553343333435333532P0211051902534555555555555555555551P0f1112190300555555555555555555555XP081112190323454454344334333444445XP0811121903355555533355553334555552P081112190340444444443334341544434XP0811051903524434343433343434443332P0211101904055535553333333434333532P041112190408555555345335222555555XP0811101904124433334343443334443432L0411101904125555544544444555555552P0411101904185335555553355535553552P0411121905295555554544455555554552P081105190530555555345435333555555XP0f1110190540454554344334333444444XP0411121906415335555553355535553552P0811121906434433344343443335553432L0811121907485535553333333434333532P0811051907564445444444444444444441P0f11051908494543334343343334333342L0f11051908565554531354233555555251P0f11051909064445443343343445444551P0f11051909363444434333244444444441P0211051910315355543333343343444442P0f11051911105553531355333555555251P0211121911174445443444434425554451P0811101911294444444444444444444441P0411051911475555533333343344445552P0211101912134455555555544445555551P0411101912235555531354333555554251P0411121912584444444444444444444441P0811101912595555533334343344444552P0411121913375555555555544445555551P0811121913485555531354333555555251P0811051914044444422444444444444441P0f1105191447343455444444353555334XP0f11101915024433343433343434443332P0411051916185555531354333555555251P0f11121916354434343433343434443332P0811051916394444424444444444444441P0f11051917135455443443343445445451P0211051918074444444444444444444441P0f1105191825343433343323343324454XP0211121918485555454555554445555551P0811101919554455443443343445445451P041105192110544555224254234455355XP0f11051921385555555555555555555552L0f11121921514455453443343445445451P0811051922315555555555555555555552L0211051922515545553454453535554552P0f11101923195555555555555555555552L041110192328343433343323343433454XP0411121924085555555555555555555552L0811051924445535543245252535555552P0f1112192511343433343323343323454XP0811051925225555545455543434455552L0f11051926385555555555252555555552P0211051927205555544555544434555552L021105192734555443555555545555555XL0f11101928435555545455554434555552L041112192936444544344344343555444XL0811121930015555545555554534555552L0811051930342235543354431423454532P0f1112193058544444444555433555454XL081105193135444323334353322544433XL0f11051932342235552344431443454532P0211101933145445444354454445553422P0411101934152224552354332434454532P041105193505444323434354333544433XL021105193510455554244434333555445XP0f11121935355445554244454245553522P0811121936362235552354332435554532P081110193802444233435354333444435XL0411051940474444444443433333454341P0f11101941235555553555353335555551P0411051942065435454445354455553342P0f11121943025555553555353335555551P0811051943245545554445354455553452P0211101944595545554445353445553342P0411051946254444444444444434444442L0f11121946325535553445453445553342P0811051947214434543444353434453442P0f1105194737555554245423344555555XP0f11051948025554253534452334444352P0f11051948064444444444444434444442L0211101949104444444444443434444442L0411121950164444444444443434444442L0811051950225554243422452334443352P0211051950584444544444444444444442P0211101952054445544444444444444442P0411101952505554243422452234443352P0411121952544444544444444444444442P0811051954435455552345453234453542P0211121954585554242432453334443352P0811101957195455555344343225443452P0411051957294444554455554445554452P0f11051958465545555555555555555552P021105195857545444445445444445545XP0f1105195859443444333343444445544XP0f11101959155555443455433435455552P041105195928335535335323333555555XP0f11101959485555555555555555555552P041105200001555554444444445444445XP0f1105200005555555335555555555545XP0f1105200023545454344334334444444XP0f1105200024554535454334333545435XP0f11052000294333354333234555553342P0f1105200031434454344424343335534XP0211122000375555555555555555555552P081105200108455535333333444335533XL0f1112200113543555554434334455225XP0811052001274555544444553334453341L0f1112200133443543454455333445444XP081110200138544454334444454334334XP041112200146444444444434443444444XP081105200148344434544344443544434XL0f1105200215554434455343333545435XP0211122002205555443455433335445552P081112200222555543334454544454445XP0811052002294333453353334455553342P021105200311444444444444444444444XP0f1105200348554535434535444435435XL021110200403554435455343343555335XP041105200440443545334442342544235XP0f1105200500544543333533324334554XP0f11052005094555534444543434354451L021105200558444453334545433254545XL0f1105200620452544335543333555235XP021105200702555544343533332425555XP021105200835355535335353533555555XP021105200846443434243334333444333XP0f1110201102355535335343533555555XP0411052012475433455343343335453431P0f1110201405452545334543333555225XP041110201424555545333535444535535XL041112201506452545334543333555225XP081112201613355335335343433555555XP081112201622555545444545444535535XL081105201758544545344455444455555XL0f1105202050544444434455444354543XL0f1105202054444422334325122434423XL0f1105202158554545455555455555455XL0f1105202309555353455545555545455XL0f1105202406555535555445555345455XL021105203549444434333545333334434XL0f1105203735444455454453334555344XP0f11052048034535421245353435555552P0f11052048543412421235552533321311P0f11122053373333443444333333443441P0811052108125543544545444435453332P0f11052116154344444344443334443341L0f11052117354444444344443334443341L0211102118394444444344443334443341L0411122119444444444344443334443341L081112212242433335443334554555334XL0811102126145545554444354335553352P0411122128415545554454354335553352P0811052134213324355445313455552332P0211052137244433345544453444545341L0f1105214557443434444434333444444XL0f11052200435555555555254455555552P0211102201435554555552255555555552P0411122203095555555552255545555552P0811052219143334443435455543452242P0f11052221573334442435454544343242P0211102223013334443435455544443242P0411122224013334443435454444443242P0811052322055454552354434345554551L0211102325535555553354434345554451L0411122328165555553354434345554451L0811052332024535452453343445553352P0f11052333404535453453344555553352P0211102335354545453443343445553352P0411122337195535453453343555553352P0811120109114444443333343334444342P081105051239424534525535233555345XL0f11050548584444445453443334343341L0211120551154444445454443334343341L081105060034232543455335232344123XL021110060253232543455345232334225XL0411050604065554343344353335454341L0211100605275554343344353334455331L0411120607095554343344353334455331L081105062453443333334333333444323XP0f1105062822443333434333333444323XP021110063007443333434333334444323XP041112063141443333434333334444323XP081105063616454324434323343344224XP0f1112063752433334544343322455545XP0811050638395334453545453535352342P021105063844443334434323343444334XP021110064044443334434333343434334XP041112064229443334434333343444334XP081105064807443535345355352555335XL0f1105065031555545555555555555555XL0211100653315535443444554544453452P0411120655015545444434555444453452P0811050656055554333445443344553352P0f1105070707553555535533331555555XP0f1105070900333433333245334444444XP021105070923555555445555251555555XP021105071022555555555555555555555XP021110071149555555555555555555555XP041112071314555555555555555555555XP081105071356433435334225333444444XP0f1105071730433434333345333444334XP021110072042433334333345333444333XP041110072250555555555555555555555XL041112072335555555555555555555555XL081112072441433334333345333444344XP0811050726095555355555353545555551P0f11100726574434332443343434443331P0411050727155555355455555555555551P0211120728064434332423343434443331P0811100728475553555555555555555551P0411120728494535553453334435553551P0811120729505553555555555555555551P0811050730364535553353335445553551P0211050734234534443444235554453541P0f11050734424515332553333334455341P0f11050734554535553344333434443541P0f11050735005555553455453325555451P0211050735035555455443342435555451P0211050735264435554544551335542151P0f11050735345535552533352335553551P0f11050735534435435445353543445351P0f11050736193545352453342334453551P0211100736225554553545553435555551P0411050736353545542343333435553341P0f11050736425454355454555434443441P0211050737064535553344333434443551P0f11050737084543433334343325544341P0f11050737115555445554545544555551L0211100737293555434545454554554441P0411050737355444455455343434555351P0f1105073748344435545545444555355XL0f11050737515535554434343345553441P0211050737584445444344353334453351P0f11120738144554344554455445444451P0811120738245555555555555555555551P0811050738255524554345453434452331P0f11050738264355332543333335555351P0211050738295445545344343434453551P0f11100738465555455443453335555451P0411050738485535553434333434553551P0211100738533435454552342323454551P0411050739234445443344353434443431P0f11100739365535454444343335553551P0411050739423125342124212345551131P0f11100739515535553435333435553551P0411050739544324553545454555553451P0f11050740035544542243333434543341P0211120740145555455443353335555451P0811050740235555343554552524455551L0f11120740523545454553443334553551P0811100740595545555554554455445551L0411120740595535553335333435553551P0811100741045355333553343335555351P0411050741094435545344353434453351P0211120741135535554433343345554551P0811120741364443455445533544234551L0811050742154325454333343535452241P0211100742464544543343333434543341P0411100742464435544344353434453351P0411050742562125342235214445551131P0211120742575355333553333335555351P0811050743045445545454443444454451P0211050743585354555355344535455351P0211050744092335343432352334334121P0211120744174435444344353434453351P0811120744244544543333333434543341P0811050744454445443445453445553451P0f11100745165445544454343434454451P0411100745215555555555555555555452P0411050745244333244332344525444141P0f11100745465354555555353535555351P0411120746165545544445444534454451P0811050746333435555554353435543351L0f11120746595555455455443334443352P0811100747165554454445454545454551P0411120747305354555454353353454231P0811050747355334342444332324442331P0f11100747543335242232353324344231P0411050749124443421322331223322231P0211120749284554445545544444455551P0811050749434333343333322224443331P0211120750073335341222253324344231P0811050750144544445555444444444441P0211100751044443421223332223333231P041105075110454545322453445455225XP0211050751255555342535432335553341P0f11050751364554455545544444554531P0211050751405555543344343344444341P0f11050752134333443333333324443341P0211100752194333544344334445444451P0411050752305555554353432425544441P0211120752554443321222332223333231P0811050753215555553444344434444341P0211120753294433333333333333443331P0811050754105555353435533335553351P0211100754235555554353433535555551P0411100755365544553344344434444341P0411120755565555554353433535555551P0811100756465544444444344444445341P0411050800113434444344443334444441P0211050800165444444333343444443341L0f1105080117544334544334453545424XP0211100802345453345443344535454241P0411120803365443345443344535454241P0811100810274544444554443444444441P041105081709343533433333433333353XL0f1112081945233444234233333332332XP081105082057553434535524233435213XP0f1105082218443454233333342333433XP0f1105082334555555355555555555555XP0f1105082416555555445445555555535XP0f1105082444555555355555555555555XP021110082553555555355555555555555XP041112082656555555355555555555555XP081105082713344444333443332434433XP0f1105082752454344344345333444535XP0f1105082911454555345445454555555XP021110083411444545344445333445433XP041112083622544555343435333455334XP081110083917555555555455554555555XP041112084023555555555455554555555XP0811050854034545555445354434553552P0f11050855455545545445354443553552P0211100857125555555455354444553552P0411120858515555555445354444553552P081105090349455535555555554555555XP0f1110090504555555555455554555555XP041105090556333555333334334555343XP0f1112090615555555555435555555555XP0811050914265435553445453435553432P0f11050914395323452333342525552342P0f11050916225435553445453435553432P0f11050916295324353433252535552232P0211100917355435452445453435553432P0411120918455435553445453435553432P081105095340553434434424334435313XP021110095603453434433523334435313XP041112100041453335434523334435313XP0811101029375435555455313445453342P0411121030545335555355313445553332P081105103753253343224443234443434XP0f1105104205343443334433333344423XP021110104444243443324424333444334XP041112104643343444333443333444334XP0811051053533445443343354434435551P0211051054335555455555555555555552P0f11101055543454443343354333435551P0411121056564444443343354334435551P081105110527444334334434333344434XL0f1112114012442544354344233534233XP0811051205095543422534324334525332P0211051207355334355325432223544322P0f11101208275555555555555555555552P0411121209215523524552234244452332P0811051212085555444455354434554451L021105121709543535343533354555433XP0f11121223255355555555555555555552P0811051242333553552345353525554451P0f11051243264544554355454445454451P0f11051245013553532345353525445451P0211101247013553532345353525554451P0411121248403553532345353525554451P081112134418222324534333232535233XP081105141223543555335533443555334XP0f1105141455553545344544544555345XP021112142020553555335453455555455XP0811051446203344444444454444444442P0211101447283344444444454444444442P0411121448313344444444454444444442P081112151849553544355533554455435XP0811051627283325453235453553333331L0f11051628425553333333333333333331L0211101629473333333333333333333331L0411121630473333333333333333333331L081105174518454544344435343545455XL0f1105185219433535554524342545324XL0f1105185445433445544524343435324XL021110185657443444544523333434324XL041112185829443444344523333435334XL081105190142455555355534355555345XP0f1105190342554325455545355455355XL0f11051908075555454244444444444242P0f1110190922554555444555445555445XL0411051909455555444344344444444352P021112191049554554444555445555445XL0811101911075555455344354444444352P041105191203444444333443233445434XP0f11121912045555454344454444435352P081105191325444444333433233445434XP021110191454444444333433233445434XP0411101915285433444444433444443342P041112191615444444333433233445434XP0811051946504445443344342224545231P0211051947185555442544344334554552P0211051948494545352355343325553452P0f11101948524555544344332225554351P0411051952375535352255343325553552P0211101955465555453254343435553552P0411102000165555553255352335553552P041105200117553545354534544444343XL0f11122001585555552253352335553552P081105200501555553343333455554444XP0f1110200605534544334423344544524XP041105200635555545555444554445555XP021110200756555554334454333333334XP0411102015474455555555455555555552L0411122017034455555555455555554552L0811102019265325455353353435553331P0411122021065335455353353525553331P0811122022575545444343332224555241P081112211827322335245453343553313XP0811052147364435554235213335552132P0f11052216333443345444453445444341L0211102218124434435444453445443341L0411122219254433335444453444443341L0811102358364445453445543535554351P0411120000335445453445553535554341P081105090437443443545445242554334XL0f1105090617443444545445342454445XL0211051218424545552444443445553142P0f11101221084435552344432435553142P0411121223184435552344332335553142P0811101414375555444444454445555442L0411101416355555445455453445555452L0411051504334435553334322334432332P0f11052039365455455554334345554352P0f11052040385555555555555555553352P0211102041265445444445455554555552P0411122042065555555555555555555552P0811051407245554555554555555555552P0f11051408215555555555555555555552P0211101409105555555555555555555552P0411121409455555555555555555555552P0811050752414355553345332523355351P0f";
+
+    const REV_LIKERT = { "5": "Selalu", "4": "Sering", "3": "Kadang-kadang", "2": "Jarang", "1": "Tidak pernah", "0": null };
+    const REV_KELAS = { "X": "Kelas X", "1": "Kelas XI", "2": "Kelas XII", "0": "Data tidak tersedia" };
+    const REV_GENDER = { "L": "Laki-Laki", "P": "Perempuan", "0": "Data tidak tersedia" };
+    const SCORE_MAP = { "Selalu": 5, "Sering": 4, "Kadang-kadang": 3, "Jarang": 2, "Tidak pernah": 1 };
+
+    function decodePackedDataset(blob) {
+      const out = [];
+      for (let i = 0; i < blob.length; i += 35) {
+        const rec = blob.slice(i, i + 35);
+        const mm = rec.slice(0, 2);
+        const dd = rec.slice(2, 4);
+        const hh = rec.slice(4, 6);
+        const mi = rec.slice(6, 8);
+        const ss = rec.slice(8, 10);
+        const ts = `2026-${mm}-${dd} ${hh}:${mi}:${ss}`;
+        const ans = [];
+        let valid = 0, active = 0, sum = 0;
+        for (let q = 0; q < 21; q++) {
+          const val = REV_LIKERT[rec[10 + q]];
+          ans.push(val);
+          if (val) {
+            valid++;
+            sum += SCORE_MAP[val];
+            if (val === "Selalu" || val === "Sering") active++;
+          }
+        }
+        const kelas = REV_KELAS[rec[31]] || "Data tidak tersedia";
+        const gender = REV_GENDER[rec[32]] || "Data tidak tersedia";
+        const mask = parseInt(rec.slice(33, 35), 16);
+        const sources = [];
+        if (mask & 1) sources.push("Project Vertikal (6)");
+        if (mask & 2) sources.push("Pengisian 2");
+        if (mask & 4) sources.push("Pengisian 3");
+        if (mask & 8) sources.push("pengisian 4");
+
+        out.push({
+          id: (i / 35) + 1,
+          ts,
+          ans,
+          kelas,
+          gender,
+          mask,
+          srcLabel: sources.join(", "),
+          valid,
+          active,
+          pct: valid > 0 ? (active / valid) * 100 : 0,
+          mean: valid > 0 ? sum / valid : 0
+        });
+      }
+      return out;
+    }
+
+    let ALL_RECORDS = decodePackedDataset(PACKED_RECORDS);
+
+    // =========================================================================
+    // 2. APPLICATION STATE & LIVE ANALYTICS ENGINE
+    // =========================================================================
+    let state = {
+      period: "all",
+      kelas: "ALL",
+      gender: "ALL",
+      search: "",
+      tier: "ALL",
+      sort: "ts_desc",
+      pageSize: 10,
+      page: 1
+    };
+
+    let barChart = null;
+    let donutChart = null;
+    let stackedChart = null;
+    let trendChart = null;
+    let cohortChart = null;
+
+    function fmtInt(n) {
+      return n.toLocaleString("id-ID");
+    }
+    function fmtPct(n) {
+      return isNaN(n) ? "Data tidak tersedia" : n.toFixed(2).replace(".", ",") + "%";
+    }
+    function fmtDec(n) {
+      return isNaN(n) ? "Data tidak tersedia" : n.toFixed(3).replace(".", ",");
+    }
+
+    function getScopedRecords() {
+      return ALL_RECORDS.filter(r => {
+        if (state.period === "p1" && !(r.mask & 16)) return false;
+        if (state.period === "p2" && !(r.mask & 2)) return false;
+        if (state.period === "p3" && !(r.mask & 4)) return false;
+        if (state.period === "p4" && !(r.mask & 8)) return false;
+        if (state.kelas !== "ALL" && r.kelas !== state.kelas) return false;
+        if (state.gender !== "ALL" && r.gender !== state.gender) return false;
+        return true;
+      });
+    }
+
+    function computeAnalytics(records) {
+      const likertCounts = { "Selalu": 0, "Sering": 0, "Kadang-kadang": 0, "Jarang": 0, "Tidak pernah": 0 };
+      let totalValid = 0, totalMissing = 0, totalActive = 0, totalSum = 0;
+
+      const qStats = Array.from({ length: 21 }, () => ({
+        valid: 0, missing: 0, active: 0, selalu: 0, sum: 0,
+        counts: { "Selalu": 0, "Sering": 0, "Kadang-kadang": 0, "Jarang": 0, "Tidak pernah": 0 }
+      }));
+
+      const kelasCounts = { "Kelas X": 0, "Kelas XI": 0, "Kelas XII": 0, "Data tidak tersedia": 0 };
+      const genderCounts = { "Perempuan": 0, "Laki-Laki": 0, "Data tidak tersedia": 0 };
+
+      records.forEach(r => {
+        kelasCounts[r.kelas] = (kelasCounts[r.kelas] || 0) + 1;
+        genderCounts[r.gender] = (genderCounts[r.gender] || 0) + 1;
+
+        r.ans.forEach((val, idx) => {
+          if (!val) {
+            totalMissing++;
+            qStats[idx].missing++;
+            return;
+          }
+          totalValid++;
+          likertCounts[val]++;
+          qStats[idx].valid++;
+          qStats[idx].counts[val]++;
+          const sc = SCORE_MAP[val];
+          totalSum += sc;
+          qStats[idx].sum += sc;
+          if (val === "Selalu") {
+            totalActive++;
+            qStats[idx].active++;
+            qStats[idx].selalu++;
+          } else if (val === "Sering") {
+            totalActive++;
+            qStats[idx].active++;
+          }
+        });
+      });
+
+      const habits = HABIT_DEFS.map(h => {
+        let valid = 0, missing = 0, active = 0, selalu = 0, sum = 0;
+        const dist = { "Selalu": 0, "Sering": 0, "Kadang-kadang": 0, "Jarang": 0, "Tidak pernah": 0 };
+        const subs = h.qIdx.map(qi => {
+          const qs = qStats[qi];
+          valid += qs.valid;
+          missing += qs.missing;
+          active += qs.active;
+          selalu += qs.selalu;
+          sum += qs.sum;
+          Object.keys(dist).forEach(k => dist[k] += qs.counts[k]);
+          return {
+            qNum: qi + 1,
+            text: QUESTIONS[qi],
+            valid: qs.valid,
+            missing: qs.missing,
+            pct: qs.valid > 0 ? (qs.active / qs.valid) * 100 : NaN,
+            selaluPct: qs.valid > 0 ? (qs.selalu / qs.valid) * 100 : NaN,
+            mean: qs.valid > 0 ? qs.sum / qs.valid : NaN
+          };
+        });
+
+        const pct = valid > 0 ? (active / valid) * 100 : NaN;
+        const selaluPct = valid > 0 ? (selalu / valid) * 100 : NaN;
+        const mean = valid > 0 ? sum / valid : NaN;
+
+        // Auto-generate factual data interpretation for current slice
+        const sortedSubs = [...subs].filter(s => !isNaN(s.pct)).sort((a, b) => b.pct - a.pct);
+        let interp = "Data tidak tersedia untuk cakupan filter ini.";
+        if (sortedSubs.length > 0) {
+          const topSub = sortedSubs[0];
+          const lowSub = sortedSubs[sortedSubs.length - 1];
+          interp = `Indikator terkuat adalah Q${String(topSub.qNum).padStart(2, "0")} (${fmtPct(topSub.pct)}), sedangkan titik penguatan utama berada pada Q${String(lowSub.qNum).padStart(2, "0")} (${fmtPct(lowSub.pct)}). Proporsi konsistensi penuh ("Selalu") tercatat sebesar ${fmtPct(selaluPct)}.`;
+        }
+
+        return {
+          ...h,
+          valid,
+          missing,
+          active,
+          selalu,
+          pct,
+          selaluPct,
+          mean,
+          dist,
+          subs,
+          interp
+        };
+      });
+
+      return {
+        respondents: records.length,
+        totalValid,
+        totalMissing,
+        overallPct: totalValid > 0 ? (totalActive / totalValid) * 100 : NaN,
+        selaluPct: totalValid > 0 ? (likertCounts["Selalu"] / totalValid) * 100 : NaN,
+        meanScore: totalValid > 0 ? totalSum / totalValid : NaN,
+        likertCounts,
+        kelasCounts,
+        genderCounts,
+        habits
+      };
+    }
+
+    // =========================================================================
+    // 3. UI & VISUALIZATION RENDERING
+    // =========================================================================
+    function renderDashboard() {
+      const scoped = getScopedRecords();
+      const stats = computeAnalytics(scoped);
+
+      const periodLabels = {
+        all: "Semua Data Unik",
+        p1: "Pengisian 1",
+        p2: "Pengisian 2",
+        p3: "Pengisian 3",
+        p4: "Pengisian 4"
+      };
+      document.getElementById("activeScopeBadge").textContent =
+        `Cakupan: ${periodLabels[state.period]} • ${state.kelas === "ALL" ? "Semua Kelas" : state.kelas} • ${state.gender === "ALL" ? "Semua Gender" : state.gender}`;
+
+      // KPIs
+      document.getElementById("kpiRespondents").textContent = fmtInt(stats.respondents);
+      document.getElementById("kpiItemsCount").textContent = `${fmtInt(stats.totalValid)} sel jawaban valid`;
+      document.getElementById("kpiOverallPct").textContent = fmtPct(stats.overallPct);
+      document.getElementById("kpiMeanText").textContent = stats.respondents > 0
+        ? `Skor ${fmtDec(stats.meanScore)} / 5,00 (Selalu: ${fmtPct(stats.selaluPct)})`
+        : "Data tidak tersedia";
+
+      const validHabits = stats.habits.filter(h => !isNaN(h.pct)).sort((a, b) => b.pct - a.pct);
+      if (validHabits.length > 0) {
+        const hi = validHabits[0];
+        const lo = validHabits[validHabits.length - 1];
+        document.getElementById("kpiHighestName").textContent = `${hi.id}. ${hi.name}`;
+        document.getElementById("kpiHighestPct").textContent = `${fmtPct(hi.pct)} (Skor ${fmtDec(hi.mean)})`;
+        document.getElementById("kpiLowestName").textContent = `${lo.id}. ${lo.name}`;
+        document.getElementById("kpiLowestPct").textContent = `${fmtPct(lo.pct)} (Skor ${fmtDec(lo.mean)})`;
+      } else {
+        document.getElementById("kpiHighestName").textContent = "Data tidak tersedia";
+        document.getElementById("kpiHighestPct").textContent = "-";
+        document.getElementById("kpiLowestName").textContent = "Data tidak tersedia";
+        document.getElementById("kpiLowestPct").textContent = "-";
+      }
+
+      // Demographic & Audit Strips
+      document.getElementById("demoKelasStrip").innerHTML = Object.entries(stats.kelasCounts)
+        .filter(([, count]) => count > 0)
+        .map(([k, count]) => `<span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200">${k}: <strong>${fmtInt(count)}</strong></span>`)
+        .join("");
+
+      document.getElementById("demoGenderStrip").innerHTML = Object.entries(stats.genderCounts)
+        .filter(([, count]) => count > 0)
+        .map(([g, count]) => `<span class="px-3 py-1.5 rounded-lg bg-white border border-slate-200">${g}: <strong>${fmtInt(count)}</strong></span>`)
+        .join("");
+
+      const totalCells = stats.totalValid + stats.totalMissing;
+      const completeness = totalCells > 0 ? ((stats.totalValid / totalCells) * 100).toFixed(2).replace(".", ",") : "0,00";
+      document.getElementById("auditIntegrityText").innerHTML =
+        `Dari <strong>${fmtInt(totalCells)}</strong> sel indikator pada cakupan aktif, <strong>${fmtInt(stats.totalValid)} sel</strong> terisi (${completeness}%) dan <strong>${fmtInt(stats.totalMissing)} sel</strong> kosong tercatat sebagai <em>Data tidak tersedia</em>.`;
+
+      // Dynamic Insight Banner
+      if (validHabits.length > 0) {
+        const hi = validHabits[0];
+        const lo = validHabits[validHabits.length - 1];
+        const gap = (hi.pct - lo.pct).toFixed(2).replace(".", ",");
+        document.getElementById("dynamicInsightBanner").innerHTML = `
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+            <div>
+              <span class="font-mono text-[11px] uppercase tracking-widest text-xavPastelDeep">Ringkasan Otomatis Cakupan Aktif (${fmtInt(stats.respondents)} Responden)</span>
+              <h3 class="font-heading font-bold text-xl sm:text-2xl text-white mt-1.5">
+                Rentang Capaian Antar-Kebiasaan Sebesar <span class="text-xavGoldBright">${gap} Poin Persentase</span>
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+                Pada filter saat ini, <strong>${hi.name}</strong> memimpin di angka <strong>${fmtPct(hi.pct)}</strong> (${fmtInt(hi.active)} dari ${fmtInt(hi.valid)} item aktif), sementara <strong>${lo.name}</strong> berada di <strong>${fmtPct(lo.pct)}</strong> (${fmtInt(lo.active)} dari ${fmtInt(lo.valid)} item aktif).
+              </p>
+            </div>
+            <div class="shrink-0 flex gap-4 border-t lg:border-t-0 lg:border-l border-white/15 pt-4 lg:pt-0 lg:pl-6">
+              <div>
+                <span class="block font-mono text-[10px] uppercase text-slate-400">Konsistensi Selalu</span>
+                <span class="font-display text-3xl text-xavGoldBright">${fmtPct(stats.selaluPct)}</span>
+              </div>
+              <div>
+                <span class="block font-mono text-[10px] uppercase text-slate-400">Skor Rata-Rata</span>
+                <span class="font-display text-3xl text-white">${fmtDec(stats.meanScore)}</span>
+              </div>
+            </div>
+          </div>
+        `;
+      } else {
+        document.getElementById("dynamicInsightBanner").innerHTML = `<p class="text-sm text-slate-300">Data tidak tersedia untuk kombinasi filter ini.</p>`;
+      }
+
+      // Render 7 Habit Cards
+      const grid = document.getElementById("habitsGrid");
+      grid.innerHTML = stats.habits.map(h => `
+        <article class="card-editorial rounded-2xl p-6 sm:p-7 flex flex-col justify-between">
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-4">
+              <div>
+                <span class="font-mono text-xs uppercase tracking-widest text-xavGold font-semibold">Kebiasaan 0${h.id}</span>
+                <h3 class="font-heading font-extrabold text-2xl text-xavObsidian mt-1">${h.name}</h3>
+              </div>
+              <div class="text-right">
+                <span class="font-display text-3xl text-xavObsidian">${fmtPct(h.pct)}</span>
+                <span class="block font-mono text-[11px] text-slate-500">Skor ${fmtDec(h.mean)} / 5,00</span>
+              </div>
+            </div>
+
+            <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden mb-5">
+              <div class="h-full rounded-full transition-all duration-700" style="width:${isNaN(h.pct) ? 0 : h.pct}%; background: linear-gradient(90deg, #EAB308, #0B0D11);"></div>
+            </div>
+
+            <div class="space-y-3 mb-5">
+              ${h.subs.map(s => `
+                <div class="p-3 rounded-xl bg-xavIvory border border-slate-200/75">
+                  <div class="flex items-start justify-between gap-3 text-xs mb-1.5">
+                    <span class="text-slate-700 font-medium leading-snug"><strong class="font-mono text-xavObsidian">Q${String(s.qNum).padStart(2, "0")}.</strong> ${s.text}</span>
+                    <span class="font-mono font-bold text-xavObsidian shrink-0">${fmtPct(s.pct)}</span>
+                  </div>
+                  <div class="w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
+                    <div class="h-full bg-xavGold rounded-full" style="width:${isNaN(s.pct) ? 0 : s.pct}%"></div>
+                  </div>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+            <p class="text-slate-600 leading-relaxed">${h.interp}</p>
+            <span class="font-mono text-[11px] text-slate-400 shrink-0">${fmtInt(h.valid)} item${h.missing > 0 ? ` (${h.missing} kosong)` : ""}</span>
+          </div>
+        </article>
+      `).join("");
+
+      updateCharts(stats);
+      state.page = 1;
+      renderTable(scoped);
+    }
+
+    function updateCharts(stats) {
+      const labels = stats.habits.map(h => `${h.id}. ${h.name}`);
+      const values = stats.habits.map(h => isNaN(h.pct) ? 0 : Number(h.pct.toFixed(2)));
+
+      if (barChart) barChart.destroy();
+      barChart = new Chart(document.getElementById("habitBarChart"), {
+        type: "bar",
+        data: {
+          labels,
+          datasets: [{
+            label: "Penerapan Aktif (Selalu + Sering %)",
+            data: values,
+            backgroundColor: values.map(v => v >= 80 ? "#0B0D11" : v >= 65 ? "#D4A017" : "#FDE047"),
+            borderColor: "#0B0D11",
+            borderWidth: 1,
+            borderRadius: 8
+          }]
+        },
+        options: {
+          indexAxis: "y",
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: ctx => {
+                  const h = stats.habits[ctx.dataIndex];
+                  return ` Aktif: ${fmtPct(h.pct)} (${fmtInt(h.active)}/${fmtInt(h.valid)} item • Skor ${fmtDec(h.mean)})`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: { min: 0, max: 100, grid: { color: "#F1F5F9" }, ticks: { callback: v => v + "%" } },
+            y: { grid: { display: false }, ticks: { font: { weight: "600", size: 11 } } }
+          }
+        }
+      });
+
+      const likertLabels = Object.keys(stats.likertCounts);
+      const likertData = Object.values(stats.likertCounts);
+      if (donutChart) donutChart.destroy();
+      donutChart = new Chart(document.getElementById("likertDonutChart"), {
+        type: "doughnut",
+        data: {
+          labels: likertLabels,
+          datasets: [{
+            data: likertData,
+            backgroundColor: ["#0B0D11", "#D4A017", "#FDE047", "#94A3B8", "#E2E8F0"],
+            borderWidth: 2,
+            borderColor: "#FFFFFF"
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          cutout: "62%",
+          plugins: {
+            legend: { position: "bottom", labels: { boxWidth: 12, font: { size: 11 } } },
+            tooltip: {
+              callbacks: {
+                label: ctx => {
+                  const tot = likertData.reduce((a, b) => a + b, 0);
+                  const pct = tot > 0 ? ((ctx.parsed / tot) * 100).toFixed(2).replace(".", ",") : "0,00";
+                  return ` ${ctx.label}: ${fmtInt(ctx.parsed)} (${pct}%)`;
+                }
+              }
+            }
+          }
+        }
+      });
+
+      // Stacked Intensity Comparison Chart
+      const cats = ["Selalu", "Sering", "Kadang-kadang", "Jarang", "Tidak pernah"];
+      const catColors = ["#0B0D11", "#D4A017", "#FDE047", "#94A3B8", "#CBD5E1"];
+      if (stackedChart) stackedChart.destroy();
+      stackedChart = new Chart(document.getElementById("stackedCompareChart"), {
+        type: "bar",
+        data: {
+          labels,
+          datasets: cats.map((cat, idx) => ({
+            label: cat,
+            data: stats.habits.map(h => h.valid > 0 ? Number(((h.dist[cat] / h.valid) * 100).toFixed(2)) : 0),
+            backgroundColor: catColors[idx],
+            borderRadius: 4
+          }))
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: "bottom", labels: { boxWidth: 12, font: { size: 11 } } },
+            tooltip: {
+              callbacks: {
+                label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y.toFixed(2).replace(".", ",")}%`
+              }
+            }
+          },
+          scales: {
+            x: { stacked: true, grid: { display: false }, ticks: { font: { size: 11, weight: "600" } } },
+            y: { stacked: true, min: 0, max: 100, grid: { color: "#F1F5F9" }, ticks: { callback: v => v + "%" } }
+          }
+        }
+      });
+    }
+
+    function initLongitudinalAndCohortCharts() {
+      const pKeys = [
+        { key: "p1", label: "Pengisian 1 (N=704)" },
+        { key: "p2", label: "Pengisian 2 (N=943)" },
+        { key: "p3", label: "Pengisian 3 (N=858)" },
+        { key: "p4", label: "Pengisian 4 (N=724)" }
+      ];
+      const pStats = pKeys.map(p => {
+        const recs = ALL_RECORDS.filter(r => {
+          if (p.key === "p1") return (r.mask & 16) !== 0;
+          if (p.key === "p2") return (r.mask & 2) !== 0;
+          if (p.key === "p3") return (r.mask & 4) !== 0;
+          if (p.key === "p4") return (r.mask & 8) !== 0;
+          return true;
+        });
+        return computeAnalytics(recs);
+      });
+
+      if (trendChart) trendChart.destroy();
+      trendChart = new Chart(document.getElementById("trendLineChart"), {
+        type: "line",
+        data: {
+          labels: pKeys.map(p => p.label),
+          datasets: [
+            {
+              label: "Keseluruhan (21 Indikator)",
+              data: pStats.map(s => Number(s.overallPct.toFixed(2))),
+              borderColor: "#0B0D11",
+              backgroundColor: "#0B0D11",
+              borderWidth: 3,
+              tension: 0.25,
+              pointRadius: 5
+            },
+            {
+              label: "Bermasyarakat (Tertinggi)",
+              data: pStats.map(s => Number(s.habits[5].pct.toFixed(2))),
+              borderColor: "#D4A017",
+              backgroundColor: "#D4A017",
+              borderWidth: 2.5,
+              tension: 0.25,
+              pointRadius: 4
+            },
+            {
+              label: "Gemar Belajar (Terendah)",
+              data: pStats.map(s => Number(s.habits[4].pct.toFixed(2))),
+              borderColor: "#64748B",
+              backgroundColor: "#64748B",
+              borderDash: [5, 5],
+              borderWidth: 2,
+              tension: 0.25,
+              pointRadius: 4
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: "bottom", labels: { boxWidth: 12, font: { size: 11 } } },
+            tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y.toFixed(2).replace(".", ",")}%` } }
+          },
+          scales: {
+            y: { min: 40, max: 100, grid: { color: "#F1F5F9" }, ticks: { callback: v => v + "%" } },
+            x: { grid: { display: false }, ticks: { font: { size: 11 } } }
+          }
+        }
+      });
+
+      const cohorts = [
+        { label: "Kelas X", recs: ALL_RECORDS.filter(r => r.kelas === "Kelas X") },
+        { label: "Kelas XI", recs: ALL_RECORDS.filter(r => r.kelas === "Kelas XI") },
+        { label: "Kelas XII", recs: ALL_RECORDS.filter(r => r.kelas === "Kelas XII") },
+        { label: "Perempuan", recs: ALL_RECORDS.filter(r => r.gender === "Perempuan") },
+        { label: "Laki-Laki", recs: ALL_RECORDS.filter(r => r.gender === "Laki-Laki") }
+      ];
+      const cStats = cohorts.map(c => ({ label: `${c.label} (${fmtInt(c.recs.length)})`, pct: Number(computeAnalytics(c.recs).overallPct.toFixed(2)) }));
+
+      if (cohortChart) cohortChart.destroy();
+      cohortChart = new Chart(document.getElementById("cohortCompareChart"), {
+        type: "bar",
+        data: {
+          labels: cStats.map(c => c.label),
+          datasets: [{
+            label: "Penerapan Aktif (%)",
+            data: cStats.map(c => c.pct),
+            backgroundColor: ["#EAB308", "#FDE047", "#0B0D11", "#D4A017", "#475569"],
+            borderRadius: 8
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: { callbacks: { label: ctx => ` Penerapan Aktif: ${ctx.parsed.y.toFixed(2).replace(".", ",")}%` } }
+          },
+          scales: {
+            y: { min: 50, max: 85, grid: { color: "#F1F5F9" }, ticks: { callback: v => v + "%" } },
+            x: { grid: { display: false }, ticks: { font: { size: 11, weight: "600" } } }
+          }
+        }
+      });
+    }
+
+    // =========================================================================
+    // 4. FULL-DATASET SEARCHABLE, SORTABLE & PAGINATED TABLE
+    // =========================================================================
+    function renderTable(scopedRecords) {
+      let rows = scopedRecords || getScopedRecords();
+
+      if (state.tier === "HIGH") rows = rows.filter(r => r.pct >= 80);
+      else if (state.tier === "MID") rows = rows.filter(r => r.pct >= 60 && r.pct < 80);
+      else if (state.tier === "LOW") rows = rows.filter(r => r.pct < 60);
+
+      if (state.search) {
+        const q = state.search.toLowerCase();
+        rows = rows.filter(r =>
+          r.ts.toLowerCase().includes(q) ||
+          r.srcLabel.toLowerCase().includes(q) ||
+          r.kelas.toLowerCase().includes(q) ||
+          r.gender.toLowerCase().includes(q) ||
+          String(r.id).includes(q)
+        );
+      }
+
+      rows = [...rows].sort((a, b) => {
+        if (state.sort === "ts_asc") return a.ts.localeCompare(b.ts);
+        if (state.sort === "score_desc") return b.mean - a.mean || b.pct - a.pct;
+        if (state.sort === "score_asc") return a.mean - b.mean || a.pct - b.pct;
+        return b.ts.localeCompare(a.ts);
+      });
+
+      const total = rows.length;
+      document.getElementById("tableTotalBadge").textContent = fmtInt(total);
+      const totalPages = Math.max(1, Math.ceil(total / state.pageSize));
+      if (state.page > totalPages) state.page = totalPages;
+
+      const start = (state.page - 1) * state.pageSize;
+      const slice = rows.slice(start, start + state.pageSize);
+
+      const tbody = document.getElementById("dataTableBody");
+      if (slice.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="8" class="py-10 text-center text-slate-500">Data tidak tersedia untuk kriteria pencarian atau filter saat ini.</td></tr>`;
+      } else {
+        tbody.innerHTML = slice.map((r, i) => `
+          <tr class="hover:bg-xavPastel/35 transition-colors">
+            <td class="py-3 px-4 font-mono text-slate-500">${fmtInt(start + i + 1)}</td>
+            <td class="py-3 px-4 font-mono text-xavObsidian">${r.ts}</td>
+            <td class="py-3 px-4 text-slate-600">${r.srcLabel}</td>
+            <td class="py-3 px-4 font-semibold">${r.kelas}</td>
+            <td class="py-3 px-4">${r.gender}</td>
+            <td class="py-3 px-4 font-mono font-semibold text-xavObsidian">${fmtPct(r.pct)} <span class="text-slate-400 font-normal">(${r.active}/${r.valid})</span></td>
+            <td class="py-3 px-4 font-mono text-xavGoldDark font-bold">${fmtDec(r.mean)} / 5,00</td>
+            <td class="py-3 px-4 text-right">
+              <button onclick="openDetail(${r.id})" class="px-3 py-1 rounded-md bg-xavObsidian text-xavPastelDeep font-semibold hover:bg-xavGold hover:text-xavObsidian transition-colors">Rincian</button>
+            </td>
+          </tr>
+        `).join("");
+      }
+
+      document.getElementById("paginationInfo").textContent = total === 0
+        ? "Menampilkan 0 entri"
+        : `Menampilkan ${fmtInt(start + 1)}–${fmtInt(Math.min(start + state.pageSize, total))} dari ${fmtInt(total)} entri`;
+      document.getElementById("pageIndicator").textContent = `${fmtInt(state.page)} / ${fmtInt(totalPages)}`;
+
+      document.getElementById("firstPage").disabled = state.page <= 1;
+      document.getElementById("prevPage").disabled = state.page <= 1;
+      document.getElementById("nextPage").disabled = state.page >= totalPages;
+      document.getElementById("lastPage").disabled = state.page >= totalPages;
+      document.getElementById("lastPage").dataset.totalPages = totalPages;
+    }
+
+    function openDetail(recordId) {
+      const r = ALL_RECORDS.find(x => x.id === recordId);
+      if (!r) return;
+      document.getElementById("modalTitle").textContent = `Entri #${fmtInt(r.id)} • ${r.ts}`;
+      document.getElementById("modalSub").textContent = `Kelas: ${r.kelas} • Gender: ${r.gender} • Berkas: ${r.srcLabel} • Skor: ${fmtDec(r.mean)}/5,00 (${fmtPct(r.pct)})`;
+      document.getElementById("modalContent").innerHTML = QUESTIONS.map((q, i) => {
+        const val = r.ans[i] || "Data tidak tersedia";
+        const badgeCls = val === "Selalu"
+          ? "bg-xavObsidian text-xavGoldBright"
+          : val === "Sering"
+          ? "bg-xavPastel text-xavObsidian border border-xavGold/40"
+          : val === "Data tidak tersedia"
+          ? "bg-red-50 text-red-700 border border-red-200"
+          : "bg-slate-200 text-slate-700";
+        return `
+          <div class="p-3 rounded-xl bg-xavIvory border border-slate-200 flex items-start justify-between gap-4">
+            <span class="text-slate-700 leading-snug"><strong class="font-mono text-xavObsidian">Q${String(i + 1).padStart(2, "0")}.</strong> ${q}</span>
+            <span class="font-mono font-bold shrink-0 px-2.5 py-0.5 rounded ${badgeCls}">${val}</span>
+          </div>
+        `;
+      }).join("");
+      const modal = document.getElementById("detailModal");
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+
+    // =========================================================================
+    // 5. LIVE .XLSX FILE UPLOADER (RE-COMPUTES ENTIRE DASHBOARD FROM RAW EXCEL)
+    // =========================================================================
+    document.getElementById("xlsxUpload").addEventListener("change", async e => {
+      const files = Array.from(e.target.files || []);
+      if (!files.length) return;
+      const kelasSet = new Set(["Kelas X", "Kelas XI", "Kelas XII"]);
+      const byTs = new Map();
+
+      for (const file of files) {
+        const buf = await file.arrayBuffer();
+        const wb = XLSX.read(buf, { type: "array", cellDates: true });
+        const ws = wb.Sheets[wb.SheetNames[0]];
+        const rows = XLSX.utils.sheet_to_json(ws, { header: 1, defval: null });
+        rows.forEach((r, idx) => {
+          if (!r || r.every(c => c === null || c === "")) return;
+          if (idx === 0 && typeof r[0] === "string" && r[0].toLowerCase().includes("timestamp")) return;
+          const tsVal = r[0] instanceof Date
+            ? new Date(r[0].getTime() - r[0].getTimezoneOffset() * 60000).toISOString().replace("T", " ").slice(0, 19)
+            : String(r[0]).slice(0, 19);
+
+          let kelas, gender, ans;
+          if (kelasSet.has(r[1])) {
+            kelas = r[1] || "Data tidak tersedia";
+            gender = r[2] || "Data tidak tersedia";
+            ans = r.slice(3, 24).map(v => v || null);
+          } else {
+            ans = r.slice(1, 22).map(v => v || null);
+            kelas = r[22] || "Data tidak tersedia";
+            gender = r[23] || "Data tidak tersedia";
+          }
+
+          let valid = 0, active = 0, sum = 0;
+          ans.forEach(a => {
+            if (SCORE_MAP[a]) {
+              valid++;
+              sum += SCORE_MAP[a];
+              if (a === "Selalu" || a === "Sering") active++;
+            }
+          });
+
+          if (!byTs.has(tsVal)) {
+            byTs.set(tsVal, {
+              id: byTs.size + 1,
+              ts: tsVal,
+              ans,
+              kelas,
+              gender,
+              mask: 1,
+              srcLabel: file.name,
+              valid,
+              active,
+              pct: valid > 0 ? (active / valid) * 100 : 0,
+              mean: valid > 0 ? sum / valid : 0
+            });
+          } else {
+            const existing = byTs.get(tsVal);
+            if (!existing.srcLabel.includes(file.name)) existing.srcLabel += ", " + file.name;
+          }
+        });
+      }
+
+      if (byTs.size > 0) {
+        ALL_RECORDS = Array.from(byTs.values()).sort((a, b) => a.ts.localeCompare(b.ts));
+        ALL_RECORDS.forEach((r, idx) => (r.id = idx + 1));
+        state.period = "all";
+        state.kelas = "ALL";
+        state.gender = "ALL";
+        initLongitudinalAndCohortCharts();
+        renderDashboard();
+      }
+    });
+
+    // =========================================================================
+    // 6. EVENT LISTENERS, SCROLL-SPY & SMOOTH REVEAL ANIMATIONS
+    // =========================================================================
+    document.querySelectorAll(".period-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".period-btn").forEach(b => {
+          b.classList.remove("pill-active");
+          b.classList.add("bg-white", "text-slate-700", "border-slate-300");
+        });
+        btn.classList.add("pill-active");
+        btn.classList.remove("bg-white", "text-slate-700", "border-slate-300");
+        state.period = btn.dataset.period;
+        renderDashboard();
+      });
+    });
+
+    document.getElementById("globalKelasFilter").addEventListener("change", e => {
+      state.kelas = e.target.value;
+      renderDashboard();
+    });
+    document.getElementById("globalGenderFilter").addEventListener("change", e => {
+      state.gender = e.target.value;
+      renderDashboard();
+    });
+    document.getElementById("resetGlobalFilters").addEventListener("click", () => {
+      state.period = "all";
+      state.kelas = "ALL";
+      state.gender = "ALL";
+      document.getElementById("globalKelasFilter").value = "ALL";
+      document.getElementById("globalGenderFilter").value = "ALL";
+      document.querySelectorAll(".period-btn").forEach(b => {
+        b.classList.toggle("pill-active", b.dataset.period === "all");
+        if (b.dataset.period !== "all") b.classList.add("bg-white", "text-slate-700", "border-slate-300");
+      });
+      renderDashboard();
+    });
+
+    document.getElementById("tableSearch").addEventListener("input", e => {
+      state.search = e.target.value;
+      state.page = 1;
+      renderTable();
+    });
+    document.getElementById("tableTierFilter").addEventListener("change", e => {
+      state.tier = e.target.value;
+      state.page = 1;
+      renderTable();
+    });
+    document.getElementById("sortTable").addEventListener("change", e => {
+      state.sort = e.target.value;
+      state.page = 1;
+      renderTable();
+    });
+    document.getElementById("pageSizeSelect").addEventListener("change", e => {
+      state.pageSize = Number(e.target.value);
+      state.page = 1;
+      renderTable();
+    });
+
+    document.getElementById("firstPage").addEventListener("click", () => { state.page = 1; renderTable(); });
+    document.getElementById("prevPage").addEventListener("click", () => { if (state.page > 1) { state.page--; renderTable(); } });
+    document.getElementById("nextPage").addEventListener("click", () => { state.page++; renderTable(); });
+    document.getElementById("lastPage").addEventListener("click", e => { state.page = Number(e.target.dataset.totalPages || 1); renderTable(); });
+
+    document.getElementById("closeModal").addEventListener("click", () => {
+      document.getElementById("detailModal").classList.add("hidden");
+      document.getElementById("detailModal").classList.remove("flex");
+    });
+    document.getElementById("detailModal").addEventListener("click", e => {
+      if (e.target.id === "detailModal") {
+        document.getElementById("detailModal").classList.add("hidden");
+        document.getElementById("detailModal").classList.remove("flex");
+      }
+    });
+
+    document.getElementById("mobileMenuBtn").addEventListener("click", () => {
+      document.getElementById("mobileMenu").classList.toggle("hidden");
+    });
+
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 450) {
+        backToTop.classList.remove("hidden");
+        backToTop.classList.add("flex");
+      } else {
+        backToTop.classList.add("hidden");
+        backToTop.classList.remove("flex");
+      }
+    });
+    backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+    window.addEventListener("DOMContentLoaded", () => {
+      initLongitudinalAndCohortCharts();
+      renderDashboard();
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add("visible");
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+      setTimeout(() => {
+        document.getElementById("preloader").classList.add("loaded");
+      }, 420);
+    });
+  </script>
+</body>
+</html>
